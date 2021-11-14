@@ -1,1 +1,2 @@
-# nhl-ignition
+# NHL game hotness meter
+
