@@ -2,33 +2,41 @@ import requests
 import json
 from gamestats import GameStats
 
-# TODO: Grab game ID from argument
-# gameId = '2021020176'
+baseURL = "https://statsapi.web.nhl.com/api/v1/"
 
-# URL = 'https://statsapi.web.nhl.com/api/v1/game/' + gameId + '/feed/live'
-# response = requests.get(
-#     URL, params={"Content-Type": "application/json"}
-# )
+URL = baseURL + "schedule?startDate=2021-11-12&endDate=2021-11-14"
+listResponse = requests.get(
+    URL, params={"Content-Type": "application/json"}
+)
 
-# gameJson = response.json()
-# print(len(gameJson))
+if listResponse is not None:
+    listJson = listResponse.json()
 
-# if response is not None:
-#     # print(json['liveData']['plays']['allPlays'])
-#     print('events:', len(gameJson['liveData']['plays']['allPlays']))
+    for dateItem in listJson["dates"]:
+        gameDate = dateItem["date"]
+        
+        for gameItem in filter(lambda x: x["status"]["detailedState"] == "Final" \
+            and x["status"]["abstractGameState"] == "Final", dateItem["games"]):
+            gameId = gameItem["gamePk"]
 
-fileName = 'live_curl-REGULAR.json'
-# fileName = 'live_curl_OT.json'
-# fileName = 'live_curl_SO.json'
+            homeTeam = {
+                "id": gameItem["teams"]["home"]["team"]["id"],
+                "name": gameItem["teams"]["home"]["team"]["name"],
+            }
 
-with open('docs/samples/' + fileName) as f:
-    gameJson = json.load(f)
+            awayTeam = {
+                "id": gameItem["teams"]["away"]["team"]["id"],
+                "name": gameItem["teams"]["away"]["team"]["name"],
+            }
 
-    analyzer = GameStats(gameJson)
-    analyzer.think()
+            gameResponse = requests.get(
+                baseURL + "game/" + str(gameId) + "/feed/live", params={"Content-Type": "application/json"}
+            )
 
-    print(analyzer.getPoints())
+            if gameResponse is not None:
+                analyzer = GameStats(gameResponse.json())
+                analyzer.think()
 
-    gamePoints = sum(list(map(lambda x: x["points"], analyzer.getPoints())))
-
-    print('gamePoints:', gamePoints)
+                gamePoints = sum([x["points"] for x in analyzer.getPoints()])
+                
+                print(gameId, awayTeam["name"] + " / " + homeTeam["name"] + " / " + str(gamePoints))

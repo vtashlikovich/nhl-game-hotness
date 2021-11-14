@@ -8,7 +8,6 @@ STARS = [
     8473419,  # Marchand
     8475744,  # Kuznetsov
     8471685,  # Kopitar
-    8474600,  # Josi
     8475166,  # Tavares
     8474564,  # Stamkos
     8478550,  # Panarin
