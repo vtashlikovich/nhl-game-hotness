@@ -2,7 +2,7 @@
 
 ## About
 
-If you love hockey, NHL, if you track your favorite teams' progress but eagure to see any really __hot__ game replay... But you are stuck to determine which one is good? This tool will help.
+If you love hockey, NHL, if you track your favorite teams' progress but eager to see any really __hot__ game replay... But you are stuck to determine which one is good? This tool will help.
 
 This python CLI utility analyzes NHL game data and calculates hottness points. If you see _HOT_ next to the game - that's worth seeing. If you get _WOW!_ next to the game - you must watch this.
 
@@ -24,7 +24,7 @@ __Extra long shootout__. If rounds are more than 7.
 
 __Tight fight__. 28+ shots made by both teams.
 
-__The wall__. 35+ saves by any goalkeepr in regular.
+__The wall__. 35+ saves by any goalkeeper in regular.
 
 __High tension__. When regular ends with score 4:4+.
 
@@ -54,7 +54,7 @@ __Mad scorer__. 1 player scores 5+.
 
 __Star points__. Star player has 1 point in the game.
 
-__Star shines__. Star player has 2+ goals, 2+ assits or 3+ points.
+__Star shines__. Star player has 2+ goals, 2+ assists or 3+ points.
 
 __Points master__. Player (not a star) gets 3+ points per game.
 
