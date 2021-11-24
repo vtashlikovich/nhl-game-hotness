@@ -2,7 +2,7 @@
 
 import requests, json, sys
 from datetime import datetime, timedelta
-from gamestats import GameStats
+from lib.gamestats import GameStats
 
 JIRA_API_URL = "https://statsapi.web.nhl.com/api/v1/"
 
@@ -14,20 +14,24 @@ else:
 
 print("Check game " + gameId + " hotness")
 
-gameResponse = requests.get(
-    JIRA_API_URL + "game/" + str(gameId) + "/feed/live",
-    params={"Content-Type": "application/json"},
-)
-
-if gameResponse is not None:
-    analyzer = GameStats(gameResponse.json())
-    analyzer.think()
-
-    gamePoints = sum([x["points"] for x in analyzer.getPoints()])
-
-    print(
-        gameId,
-        str(gamePoints)
+try:
+    gameResponse = requests.get(
+        JIRA_API_URL + "game/" + str(gameId) + "/feed/live",
+        params={"Content-Type": "application/json"},
     )
 
-    print(analyzer.getPoints())
+    if gameResponse is not None:
+        analyzer = GameStats(gameResponse.json())
+        analyzer.think()
+
+        gamePoints = sum([x["points"] for x in analyzer.getPoints()])
+
+        print(
+            gameId,
+            str(gamePoints)
+        )
+
+        print(analyzer.getPoints())
+
+except Exception as exc:
+    print('Exception occured', type(exc).__name__)

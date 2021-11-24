@@ -40,9 +40,9 @@ __Tight win__. Both teams score 3+, regular ends with 1 puck difference only.
 
 __Come back__. One team scores 3+ straight that leads to even score or advantage.
 
-__Equal game__. Both game reach equal score at least 2 times per game.
+__Equal game__. Both teams tie the game 2 times.
 
-__Equal game 3__. Both game reach equal score at least 3 times per game.
+__Equal game 3__. Both teams tie the game at least 3 times per game.
 
 __Missed chance__. 3rd period, no goalkeeper but opponent scores.
 
@@ -66,7 +66,16 @@ $ python games.py
 
 # get hockey games points for the period from DATE to the current date
 # DATE is of YYYY-MM-DD format
-$ python games.py DATE
+$ python games.py -d DATE
+
+# dump results into json file
+$ python games.py -f file.json
+
+# do not output scores into console
+$ python games.py -s
+
+# dump results into json file saved to location: dir/YYYY-MM-DD.json
+$ python games.py -l dir
 
 # get hottness points for a single game
 $ python onegame.py GAME_ID
