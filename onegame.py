@@ -34,4 +34,5 @@ try:
         print(analyzer.getPoints())
 
 except Exception as exc:
-    print('Exception occured', type(exc).__name__)
+    traceback = sys.exc_info()
+    print('Exception occured', type(exc).__name__, traceback)

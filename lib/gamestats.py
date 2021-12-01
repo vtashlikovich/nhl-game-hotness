@@ -17,6 +17,8 @@ POINTS_LAST_CHANCE20 = "LChance20"
 POINTS_LAST_CHANCE5 = "LChance5"
 POINTS_LATE_WINNER = "LateWinner"
 POINTS_TIGHT_WIN = "TightWin"
+POINTS_LATE_TIGHT_WIN = "LateTightWin"
+POINTS_LATE_TIGHT_WIN20 = "LateTightWin20"
 POINTS_COME_BACK = "ComeBack"
 POINTS_EQUAL_GAME = "EqualG"
 POINTS_EQUAL_GAME3 = "EqualG3"
@@ -29,7 +31,7 @@ POINTS_STAR_SHINES = "SShines"
 POINTS_MASTER = "PMaster"
 
 ALL_POINTS = {
-    POINTS_OT: 8,
+    POINTS_OT: 6,
     POINTS_SO: 4,
     POINTS_LONG_SO: 3,
     POINTS_LONG_SO_EXTRA: 3,
@@ -41,8 +43,10 @@ ALL_POINTS = {
     POINTS_LAST_CHANCE5: 8,
     POINTS_LATE_WINNER: 6,
     POINTS_TIGHT_WIN: 8,
+    POINTS_LATE_TIGHT_WIN: 4,
+    POINTS_LATE_TIGHT_WIN20: 6,
     POINTS_COME_BACK: 8,
-    POINTS_EQUAL_GAME: 6,
+    POINTS_EQUAL_GAME: 5,
     POINTS_EQUAL_GAME3: 8,
     POINTS_MISSED_CHANCE: 4,
     POINTS_HAT_TRICK: 4,
@@ -87,6 +91,7 @@ class GameStats:
             self.findLateOTWinner()
 
             # Tight win, both scores 3+, games ends regular with 1 puck difference
+            # Late tight win, Tight win and the winning goal with in the last minute of 3rd
             self.findTightWin()
 
             # Come back, 3+ straight goals, up to even score or advantage
@@ -112,19 +117,20 @@ class GameStats:
             # Points master, no star players with 3+ points
             self.findPointsMaster(noticablePlayers)
 
-            # TODO: !!! points for Late winner - win in the last seconds of Regular
+            # TODO: goal while having own empty net
+            # 2021020319
 
             # TODO: points for lots of penalties
 
             # TODO: points for no goals while 3 on 5
-
-            # TODO: add points if more than 3 pucks are scored in the game
 
             # TODO: determine a fight in the game
 
             # TODO: team with league bottom beats high league team
 
             # TODO: points for bullit ?
+
+            # TODO: empty net - goal post
 
             # TODO: points for lots of post/bar shots
 
@@ -134,6 +140,9 @@ class GameStats:
 
             # TODO: Start goalie shines, star golie with 30+ saves
             # TODO: Gordie Howe hat-trick, 1 goal, 1 assist, 1 fight
+
+            # TODO: if few points - add points if more than 3 pucks are scored in the game
+            # homeGoals, awayGoals = self.getRegularItems("goals")
 
             self.pointsSum = sum([x["points"] for x in self.getPoints()])
 
@@ -221,10 +230,7 @@ class GameStats:
         ):
             self.addScore(POINTS_HIGH_TENSION)
 
-    # get time left of the last goal before the specified period end
-    def getLastGoalLeftTime(self, periodName) -> int:
-        time = -1
-
+    def getAllPeriodGoals(self, periodName):
         # loop and collect all goals of the period
         targetPeriod = None
         if periodName == "REGULAR":
@@ -240,6 +246,14 @@ class GameStats:
                 and x["result"]["eventTypeId"] == "GOAL",
                 self.game["liveData"]["plays"]["allPlays"],
             )
+        
+        return targetPeriod
+
+    # get time left of the last goal before the specified period end
+    def getLastGoalLeftTime(self, periodName) -> int:
+        time = -1
+
+        targetPeriod = self.getAllPeriodGoals(periodName)
 
         # collect list of time remaining
         allGoalLeftTimes = [x["about"]["periodTimeRemaining"] for x in targetPeriod]
@@ -289,6 +303,25 @@ class GameStats:
             and abs(homeGoals - awayGoals) == 1
         ):
             self.addScore(POINTS_TIGHT_WIN)
+
+            # get the last goal time left
+            lastGoalLeftTime = self.getLastGoalLeftTime("REGULAR")
+
+            # determine if it's a winning goal
+            targetPeriod = list(self.getAllPeriodGoals("REGULAR"))
+            winningGoal = False
+            if len(targetPeriod) > 0:
+                winningGoal = targetPeriod[-1]["result"]["gameWinningGoal"]
+
+            if (
+                winningGoal
+                and self.game["liveData"]["linescore"]["currentPeriodOrdinal"] == "3rd"
+                and lastGoalLeftTime != -1
+            ):
+                if lastGoalLeftTime < 21:
+                    self.addScore(POINTS_LATE_TIGHT_WIN20)
+                elif lastGoalLeftTime < 61:
+                    self.addScore(POINTS_LATE_TIGHT_WIN)
 
     def getRegularGoals(self) -> list:
         allRegularGoals = filter(

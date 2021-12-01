@@ -1,7 +1,9 @@
 docs/
 web/
 log/
+logs/
 *.psd
+publish/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

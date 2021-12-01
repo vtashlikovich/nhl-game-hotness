@@ -1,4 +1,4 @@
-import requests, json
+import requests, json, sys, logging
 from datetime import datetime, timedelta
 from .gamestats import GameStats
 
@@ -6,7 +6,8 @@ JIRA_API_URL = "https://statsapi.web.nhl.com/api/v1/"
 
 class GameListStats:
 
-    def __init__(self, startDate: str = None, endDate: str = None):
+    def __init__(self, startDate: str = None, endDate: str = None, logger = None):
+        self.logger = logger
         self.results = []
         self.startDate = startDate
         self.endDate = endDate
@@ -23,11 +24,17 @@ class GameListStats:
     def think(self, logLiveResult: bool = False):
         URL = JIRA_API_URL + "schedule?startDate=" + self.startDate + "&endDate=" + self.endDate
 
+        if (self.logger is not None):
+            self.logger.info("getting list: " + URL)
+
         try:
             listResponse = requests.get(URL, params={"Content-Type": "application/json"})
 
             if listResponse is not None:
                 listJson = listResponse.json()
+
+                if (self.logger is not None):
+                    self.logger.info("parsing each game")
 
                 for dateItem in listJson["dates"]:
                     gameDate = dateItem["date"]
@@ -49,8 +56,13 @@ class GameListStats:
                             "name": gameItem["teams"]["away"]["team"]["name"],
                         }
 
+                        gameURL = JIRA_API_URL + "game/" + str(gameId) + "/feed/live"
+                        
+                        if (self.logger is not None):
+                            self.logger.info("checking game: " + str(gameId))
+
                         gameResponse = requests.get(
-                            JIRA_API_URL + "game/" + str(gameId) + "/feed/live",
+                            gameURL,
                             params={"Content-Type": "application/json"},
                         )
 
@@ -68,7 +80,9 @@ class GameListStats:
                                 "date": gameDate,
                                 "id": gameId,
                                 "awayteam": awayTeam["name"],
+                                "awayabr": analyzer.game["gameData"]["teams"]["away"]["abbreviation"],
                                 "hometeam": homeTeam["name"],
+                                "homeabr": analyzer.game["gameData"]["teams"]["home"]["abbreviation"],
                                 "points": gamePoints,
                                 "hottness": hottnessLevel
                             })
@@ -83,5 +97,11 @@ class GameListStats:
                                     str(gamePoints).ljust(3),
                                     hottnessLevel
                                 )
+
+                if (self.logger is not None):
+                    self.logger.info("success")
+
         except Exception as exc:
-            print('Exception occured', type(exc).__name__)
+            traceback = sys.exc_info()
+            print(f"Exception occured: {type(exc).__name__}, {traceback}")
+            logger.critical(f"Exception occured: {type(exc).__name__}, {traceback}")

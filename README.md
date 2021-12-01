@@ -38,6 +38,8 @@ __Late winner__. Winning goal in the last 15 seconds of OT.
 
 __Tight win__. Both teams score 3+, regular ends with 1 puck difference only.
 
+__Late tight win__. Tight win and the winning goal is within the last minute or 20 seconds of the 3rd.
+
 __Come back__. One team scores 3+ straight that leads to even score or advantage.
 
 __Equal game__. Both teams tie the game 2 times.
