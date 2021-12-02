@@ -1,0 +1,4 @@
+POST http://localhost:5000/updatenhlgames
+
+POST http://localhost:5000/updatenhlgamesLU6QxuMVyzyrHNqV
+

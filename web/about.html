@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+  <title>NHL game hotness</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- <link rel="icon" href="img/favicon.png"> -->
+  <meta name="theme-color" content="">
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  <meta name="twitter:card" content="">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+</head>
+<body class="d-flex flex-column h-100">
+  
+  <!-- Responsive navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+          <a class="navbar-brand" href="/"><b>NHL</b> game <span class="hot">Hotness</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <!-- Page content-->
+  <div class="container">
+      <div class="mt-3">
+          
+          <div class="container">
+
+            <p>
+              Non-commercial NHL game hotness meter uses game statistics fetched by API periodically. Analyzes data and calculates points for the each game component. Below you can find the list of events points are given for.
+            </p>
+
+            <table class="table">
+            <thead>
+              <tr class="table-info">
+                <th scope="col" width="30%">Event</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">Overtime</td>
+                <td>If teams got to OT</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Shootout</td>
+                <td>If teams reached SO</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Long shootout</td>
+                <td>If rounds are more than 3</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Extra long shootout</td>
+                <td>If rounds are more than 7</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Tight fight</td>
+                <td>28+ shots made by both teams</td>
+              </tr>
+
+              <tr>
+                <td scope="row">The wall</td>
+                <td>35+ saves by any goalkeeper in regular</td>
+              </tr>
+
+              <tr>
+                <td scope="row">High tension</td>
+                <td>When regular ends with score 4:4+</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Last chance</td>
+                <td>When OT set up in the last minute</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Last chance 20</td>
+                <td>When OT set up in the 20 seconds</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Last chance 5</td>
+                <td>When OT set up in the 5 seconds</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Late winner</td>
+                <td>Winning goal in the last 15 seconds of OT</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Tight win</td>
+                <td>Both teams score 3+, regular ends with 1 puck difference only</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Late tight win</td>
+                <td>Tight win and the winning goal is within the last minute or 20 seconds of the 3rd</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Come back</td>
+                <td>One team scores 3+ straight that leads to even score or advantage</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Equal game</td>
+                <td>Both teams tie the game 2 times</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Equal game 3</td>
+                <td>Both teams tie the game at least 3 times</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Missed chance</td>
+                <td>3rd period, no goalkeeper but opponent scores</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Hat trick</td>
+                <td>1 player gets a hatty</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Poker</td>
+                <td>1 player gets a poker</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Mad scorer</td>
+                <td>1 player scores 5+</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Star points</td>
+                <td>Star player has 1 point in the game</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Star shines</td>
+                <td>Star player has 2+ goals, 2+ assists or 3+ points</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Points master</td>
+                <td>Not a star player gets 3+ points per game</td>
+              </tr>
+            </tbody>
+          </table>
+
+          </div>
+
+      </div>
+  </div>
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      Any questions, suggestions? <a href="mailto:drackon@gmail.com">Contact me</a> <div class="mention">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </div>
+  </footer>
+
+  <!--[if IE]><div class="w-100 text-center bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"><p onClick="parentNode.remove()">Please use a modern browser for a better browsing experience. <span class="float-right">X</span></p></div><![endif]-->
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

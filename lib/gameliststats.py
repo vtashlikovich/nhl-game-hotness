@@ -39,6 +39,9 @@ class GameListStats:
                 for dateItem in listJson["dates"]:
                     gameDate = dateItem["date"]
 
+                    if (self.logger is not None):
+                        self.logger.info("date: " + gameDate)
+
                     for gameItem in filter(
                         lambda x: x["status"]["detailedState"] == "Final"
                         and x["status"]["abstractGameState"] == "Final",

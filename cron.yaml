@@ -1,0 +1,5 @@
+version: 1
+cron: 
+  - name: "hh_job"
+    url: "/updatenhlgamesLU6QxuMVyzyrHNqV"
+    schedule: "*/30 * * * *"

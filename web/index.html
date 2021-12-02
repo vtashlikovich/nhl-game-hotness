@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="UTF-8" />
+  <title>NHL game hotness</title>
+  <meta name="description" content="Find which NHL game is worth seeing. Daily points calculation for each hockey game. Find which one is hot or not. Over 20 metrics supported">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#212529">
+  <meta property="og:title" content="NHL game hotness" />
+  <meta property="og:description" content="Find which NHL game is worth seeing. Daily points calculation for each hockey game. Find which one is hot or not" />
+  <meta name="twitter:title" content="NHL game hotness">
+  <meta name="twitter:description" content="Find which NHL game is worth seeing. Daily points calculation for each hockey game. Find which one is hot or not">
+  <meta name="google-site-verification" content="eVCbEw83K-WAdpsc1b4ey6uqiA4kVD01nGy4L9OAIlg" />
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+    var dataLoaded=!1,dataInProgress=!1,curDay=-1,daysBackCheck=3,curTry=0,maxTries=100;function processGamesList(a){if(dataInProgress=!1,a){$("#spinner").hide("fast");var e="";for(index in a){var s=a[index],t="";"HOT"==s.hottness?t="hot.png":"WOW!"==s.hottness&&(t="wow.png"),t.length>0&&(t='<img src="i/'+t+'">');var o=new Date(parseInt(s.date.substring(0,4)),parseInt(s.date.substring(5,7))-1,parseInt(s.date.substring(8,10))),n=e!=(o=o.toLocaleDateString("en-us",{day:"numeric",month:"short",year:"numeric"}))?o:"";e=o,$("#area").append('<div class="row"><div class="col-12 col-md-2 col-xxl-1 date">'+n+'</div><div class="col-6 col-md-3 col-xl-2 icons"><img src="teams/'+s.awayabr.toUpperCase()+'.png"><img class="div" src="i/div.png"><img src="teams/'+s.homeabr.toUpperCase()+'.png"></div><div class="d-none d-md-block col-md-4 col-lg-3 col-xl-4 col-xxl-5 gametitle"><div class="inner"><span>'+s.awayteam+"</span><span>"+s.hometeam+'</span></div></div><div class="col-3 col-md-1 col-lg-2 points"><div class="inner"><b>'+s.points+'</b><span>point(s)</span></div></div><div class="col-3 col-md-2 hotness">'+t+"</div></div>")}dataLoaded=!0}}function formFilename(a){var e=new Date;e.setDate(e.getDate()-a),console.log(e);var s=e.getMonth()+1;return e.getFullYear()+"-"+(s<10?"0":"")+s+"-"+(e.getDate()<10?"0":"")+e.getDate()+".json"}function loadDayData(){if(curTry++,dataLoaded||curTry>maxTries)return!1;if(dataInProgress)return setTimeout(loadDayData,200),!1;if(++curDay<daysBackCheck){try{dataInProgress=!0,fetch("log/"+formFilename(curDay)).then((a=>a.ok?a.json():null)).then((a=>processGamesList(a))).catch((a=>{dataInProgress=!1,console.log("exc:",a)}))}catch(a){console.log("err:"+a)}setTimeout(loadDayData,200)}}
+    $(function() {loadDayData();});
+    
+  </script>
+</head>
+<body class="d-flex flex-column h-100">
+  
+  <!-- Responsive navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+          <a class="navbar-brand" href="/"><b>NHL</b> game <span class="hot">Hotness</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <!-- Page content-->
+  <div class="container">
+      <div class="mt-3">
+
+          <div class="container">
+
+            <div class="alert alert-info" role="alert">
+              Before starting to watch NHL replays, check this page to know which game is worth seeing or <span class="hot">hot</span>. Fun is guaranteed!
+            </div>
+
+            <div class="alert alert-light checkabout" role="alert">
+                Check <a style="text-decoration:underline;" href="about.html">About</a> to know how hotness is calculated.
+            </div>
+
+            <div id="spinner" class="spinner-border text-info" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
+            <div id="area"></div>
+
+          </div>
+
+      </div>
+  </div>
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      Any questions, suggestions? <a href="mailto:drackon@gmail.com">Contact me</a> <div class="mention">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </div>
+  </footer>
+
+  <!--[if IE]><div class="w-100 text-center bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"><p onClick="parentNode.remove()">Please use a modern browser for a better browsing experience. <span class="float-right">X</span></p></div><![endif]-->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BG4QCHW52"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3BG4QCHW52');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</body>
+</html>
