@@ -5,6 +5,7 @@ logs/
 *.psd
 publish/
 publish_versions/
+settings.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

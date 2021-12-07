@@ -25,15 +25,18 @@ function processGamesList(data) {
         gameDate = gameDate.toLocaleDateString('en-us', { day: 'numeric', month:"short", year:"numeric"})
         var date2Show = lastDate != gameDate?gameDate:"";
         lastDate = gameDate;
+        var gameYoutubeSrch = item.awayteam + ' vs ' + item.hometeam + ' ' + gameDate;
+        var link = "https://www.youtube.com/results?search_query=" + encodeURI(gameYoutubeSrch);
 
         $('#area').append("<div class=\"row\"><div class=\"col-12 col-md-2 col-xxl-1 date\">" +
             date2Show + "</div><div class=\"col-6 col-md-3 col-xl-2 icons\"><img src=\"teams/" +
             item.awayabr.toUpperCase() + ".png\"><img class=\"div\" src=\"i/div.png\"><img src=\"teams/" + 
             item.homeabr.toUpperCase() + ".png\"></div><div class=\"d-none d-md-block col-md-4 col-lg-3 col-xl-4 col-xxl-5 gametitle\">" +
             "<div class=\"inner\"><span>" + item.awayteam +
-            "</span><span>" + item.hometeam + "</span></div></div><div class=\"col-3 col-md-1 col-lg-2 points\">" +
+            "</span><span>" + item.hometeam + "</span></div></div><div class=\"col-2 col-md-1 col-lg-2 points\">" +
             "<div class=\"inner\"><b>" + item.points + "</b><span>point(s)</span></div></div>" +
-            "<div class=\"col-3 col-md-2 hotness\">" + hotnessPic + "</div></div>");
+            "<div class=\"col-2 col-md-1 hotness\">" + hotnessPic + "</div>" + 
+            "<div class=\"col-2 col-md-1 video\"><a href=\"" + link + "\" target=\"_blank\"><img src=\"i/you.png\"></a></div></div>");
         }
 
         dataLoaded = true;
