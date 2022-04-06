@@ -98,7 +98,7 @@ class GameStats:
             self.findComeBack()
 
             # Equal play (1:1, 2:2, 3:3, ..) up to 2/3 times per game
-            self.findEqualGame()
+            self.find_equal_gGame()
 
             # Missed chance, in 3rd period a game no goalkeeper, opponent scores in empty net
             self.findMissedChance()
@@ -119,6 +119,8 @@ class GameStats:
 
             # TODO: goal while having own empty net
             # 2021020319
+
+            # TODO: 1 point for each goal ?
 
             # TODO: points for lots of penalties
 
@@ -161,7 +163,7 @@ class GameStats:
             and self.game["liveData"]["linescore"]["currentPeriodTimeRemaining"]
             == "Final"
         ):
-            self.addScore(POINTS_OT)
+            self.add_score(POINTS_OT)
 
     def findSO(self):
         if (
@@ -169,7 +171,7 @@ class GameStats:
             and self.game["liveData"]["linescore"]["currentPeriodTimeRemaining"]
             == "Final"
         ):
-            self.addScore(POINTS_SO)
+            self.add_score(POINTS_SO)
 
     def findLongSO(self):
         if (
@@ -183,9 +185,9 @@ class GameStats:
                 self.game["liveData"]["linescore"]["shootoutInfo"]["home"]["attempts"]
                 > 7
             ):
-                self.addScore(POINTS_LONG_SO_EXTRA)
+                self.add_score(POINTS_LONG_SO_EXTRA)
             else:
-                self.addScore(POINTS_LONG_SO)
+                self.add_score(POINTS_LONG_SO)
 
     def getRegularIterators(self):
         iterHome, iterAway = itertools.tee(
@@ -207,7 +209,7 @@ class GameStats:
         homeShots, awayShots = self.getRegularItems("shotsOnGoal")
 
         if homeShots > 27 and awayShots > 27:
-            self.addScore(POINTS_TIGHT_FIGHT)
+            self.add_score(POINTS_TIGHT_FIGHT)
 
     # The wall, 35+ saves by any goalkeeper in regular
     def findTheWall(self):
@@ -218,7 +220,7 @@ class GameStats:
         homeGoalieSaves = awayShots - awayGoals
 
         if awayGoalieSaves > 34 or homeGoalieSaves > 34:
-            self.addScore(POINTS_WALL)
+            self.add_score(POINTS_WALL)
 
     def findHighTension(self):
         homeRegularGoals, awayRegularGoals = self.getRegularItems("goals")
@@ -228,7 +230,7 @@ class GameStats:
             and homeRegularGoals > 3
             and awayRegularGoals > 3
         ):
-            self.addScore(POINTS_HIGH_TENSION)
+            self.add_score(POINTS_HIGH_TENSION)
 
     def getAllPeriodGoals(self, periodName):
         # loop and collect all goals of the period
@@ -273,12 +275,13 @@ class GameStats:
             self.game["liveData"]["linescore"]["currentPeriodOrdinal"] in ["OT", "SO"]
             and lastGoalLeftTime != -1
         ):
-            if lastGoalLeftTime < 61:
-                self.addScore(POINTS_LAST_CHANCE)
+            if lastGoalLeftTime < 6:
+                self.add_score(POINTS_LAST_CHANCE5)
             elif lastGoalLeftTime < 21:
-                self.addScore(POINTS_LAST_CHANCE20)
-            elif lastGoalLeftTime < 6:
-                self.addScore(POINTS_LAST_CHANCE5)
+                self.add_score(POINTS_LAST_CHANCE20)
+            elif lastGoalLeftTime < 61:
+                self.add_score(POINTS_LAST_CHANCE)
+            
 
     # Late winner, Goal on the last 15 seconds of OT
     def findLateOTWinner(self):
@@ -288,7 +291,7 @@ class GameStats:
             and lastGoalLeftTime != -1
             and lastGoalLeftTime < 16
         ):
-            self.addScore(POINTS_LATE_WINNER)
+            self.add_score(POINTS_LATE_WINNER)
 
     # Tight win, both scores 3+, games ends regular with 1 puck difference
     def findTightWin(self):
@@ -302,7 +305,7 @@ class GameStats:
             and awayGoals > 2
             and abs(homeGoals - awayGoals) == 1
         ):
-            self.addScore(POINTS_TIGHT_WIN)
+            self.add_score(POINTS_TIGHT_WIN)
 
             # get the last goal time left
             lastGoalLeftTime = self.getLastGoalLeftTime("REGULAR")
@@ -319,22 +322,22 @@ class GameStats:
                 and lastGoalLeftTime != -1
             ):
                 if lastGoalLeftTime < 21:
-                    self.addScore(POINTS_LATE_TIGHT_WIN20)
+                    self.add_score(POINTS_LATE_TIGHT_WIN20)
                 elif lastGoalLeftTime < 61:
-                    self.addScore(POINTS_LATE_TIGHT_WIN)
+                    self.add_score(POINTS_LATE_TIGHT_WIN)
 
-    def getRegularGoals(self) -> list:
-        allRegularGoals = filter(
+    def get_regular_goals(self) -> list:
+        all_regular_goals = filter(
             lambda x: x["about"]["periodType"] == "REGULAR"
             and x["result"]["eventTypeId"] == "GOAL",
             self.game["liveData"]["plays"]["allPlays"],
         )
 
-        return [x["about"]["goals"] for x in allRegularGoals]
+        return [x["about"]["goals"] for x in all_regular_goals]
 
     # Come back, 3+ straight goals, up to equal score or advantage (opponent scores 3+)
     def findComeBack(self):
-        allRegularGoals = self.getRegularGoals()
+        allRegularGoals = self.get_regular_goals()
 
         lastHome, lastAway = 0, 0
         lastScorer = "none"
@@ -360,13 +363,13 @@ class GameStats:
                     and lastScore["away"] > 2
                     and item["home"] - item["away"] >= 0
                 ):
-                    self.addScore(POINTS_COME_BACK)
+                    self.add_score(POINTS_COME_BACK)
                 if (
                     lastAwaySeq > 2
                     and lastScore["home"] > 2
                     and item["away"] - item["home"] >= 0
                 ):
-                    self.addScore(POINTS_COME_BACK)
+                    self.add_score(POINTS_COME_BACK)
 
                 lastHomeSeq, lastAwaySeq = 0, 0
                 if curScorer == "home":
@@ -385,27 +388,27 @@ class GameStats:
             and lastScore["away"] > 2
             and lastScore["home"] - lastScore["away"] >= 0
         ):
-            self.addScore(POINTS_COME_BACK)
+            self.add_score(POINTS_COME_BACK)
         if (
             lastAwaySeq > 2
             and lastScore["home"] > 2
             and lastScore["away"] - lastScore["home"] >= 0
         ):
-            self.addScore(POINTS_COME_BACK)
+            self.add_score(POINTS_COME_BACK)
 
     # Equal play up to 3:3, e.g.: 1:0, 1:1, 2:1, 2:2, 3:2, 3:3, ...
-    def findEqualGame(self):
-        allRegularGoals = self.getRegularGoals()
+    def find_equal_gGame(self):
+        all_regular_goals = self.get_regular_goals()
 
-        equalGameCounter = 0
-        for item in allRegularGoals:
+        equal_game_counter = 0
+        for item in all_regular_goals:
             if item["home"] == item["away"]:
-                equalGameCounter += 1
+                equal_game_counter += 1
 
-        if equalGameCounter == 2:
-            self.addScore(POINTS_EQUAL_GAME)
-        elif equalGameCounter > 2:
-            self.addScore(POINTS_EQUAL_GAME3)
+        if equal_game_counter == 2:
+            self.add_score(POINTS_EQUAL_GAME)
+        elif equal_game_counter > 2:
+            self.add_score(POINTS_EQUAL_GAME3)
 
     # Missed chance, in 3rd period a game no goalkeeper, opponent scores in empty net
     def findMissedChance(self):
@@ -418,7 +421,7 @@ class GameStats:
         )
 
         if len(list(allRegular3rdGoals)) > 0:
-            self.addScore(POINTS_MISSED_CHANCE)
+            self.add_score(POINTS_MISSED_CHANCE)
 
     def gatherNoticablePlayers(self) -> list:
         awayPlayers = list(
@@ -462,11 +465,11 @@ class GameStats:
         pokerTricks = len(list(filter(lambda x: x["goals"] == 4, noticablePlayers)))
         moreTricks = len(list(filter(lambda x: x["goals"] > 4, noticablePlayers)))
         if hatTricks > 0:
-            self.addScore(POINTS_HAT_TRICK, hatTricks)
+            self.add_score(POINTS_HAT_TRICK, hatTricks)
         if pokerTricks > 0:
-            self.addScore(POINTS_POKER, pokerTricks)
+            self.add_score(POINTS_POKER, pokerTricks)
         if moreTricks > 0:
-            self.addScore(POINTS_MAD_SCORER)
+            self.add_score(POINTS_MAD_SCORER)
 
     # Star shines / Star has points, 1+ goal Or 2+ assists, 3+ points by any star
     def findStarShines(self, noticablePlayers):
@@ -485,10 +488,10 @@ class GameStats:
                     starHasPoints -= 1
 
         if starHasPoints > 0:
-            self.addScore(POINTS_STAR_POINTS)
+            self.add_score(POINTS_STAR_POINTS)
 
         if starShinesCount > 0:
-            self.addScore(POINTS_STAR_SHINES)
+            self.add_score(POINTS_STAR_SHINES)
 
     # Points master, no star players with 3+ points
     def findPointsMaster(self, noticablePlayers):
@@ -498,9 +501,9 @@ class GameStats:
                 playersWithBigPoints += 1
 
         if playersWithBigPoints > 0:
-            self.addScore(POINTS_MASTER, playersWithBigPoints)
+            self.add_score(POINTS_MASTER, playersWithBigPoints)
 
-    def addScore(self, scoreType: str, scoreMultiplicator: int = 1):
+    def add_score(self, scoreType: str, scoreMultiplicator: int = 1):
         self.points.append(
             {"code": scoreType, "points": ALL_POINTS[scoreType] * scoreMultiplicator}
         )
