@@ -16,7 +16,7 @@ function processGamesList(data) {
         var hotnessPic = "";
 
         if (item.hottness == "HOT") hotnessPic = "hot.png";
-        else if (item.hottness == "WOW!") hotnessPic = "wow.png";
+        else if (item.hottness == "WOW!") hotnessPic = "";
         if (hotnessPic.length > 0) hotnessPic = "<img src=\"i/" + hotnessPic + "\">";
 
         var gameDate = new Date(parseInt(item.date.substring(0, 4)),
@@ -43,44 +43,20 @@ function processGamesList(data) {
     }
 }
 
-function formFilename(curDay) {
-    var curDate = new Date();
-    curDate.setDate(curDate.getDate() - curDay);
-
-    console.log(curDate);
-
-    var month = curDate.getMonth() + 1;
-    return curDate.getFullYear() + "-" + (month < 10?"0":"") + month + "-" + (curDate.getDate() < 10?"0":"") + curDate.getDate() + ".json";
-}
-
 function loadDayData() {
-    curTry++;
-    if (dataLoaded || curTry > maxTries) return false;
-    if (dataInProgress)
-    {
-        setTimeout(loadDayData, 200);
-        return false;
+    try {
+        dataInProgress = true;
+        fetch('log/wow-matches-2122.json')
+        .then(response => {
+            return response.ok?response.json():null;
+        })
+        .then(data => processGamesList(data))
+        .catch(error => {
+            dataInProgress = false;
+            console.log('exc:' + error);
+        });
     }
-
-    curDay++;
-
-    if (curDay < daysBackCheck) {
-        try {
-            dataInProgress = true;
-            fetch('log/' + formFilename(curDay))
-            .then(response => {
-                return response.ok?response.json():null;
-            })
-            .then(data => processGamesList(data))
-            .catch(error => {
-                dataInProgress = false;
-                console.log('exc:', error);
-            });
-        }
-        catch(exc) {
-            console.log('err:' + exc);
-        }
-
-        setTimeout(loadDayData, 200);
+    catch(exc) {
+        console.log('err:' + exc);
     }
 }

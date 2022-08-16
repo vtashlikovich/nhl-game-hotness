@@ -6,6 +6,8 @@ logs/
 publish/
 publish_versions/
 settings.json
+digital-publish/
+sweden-publish/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
