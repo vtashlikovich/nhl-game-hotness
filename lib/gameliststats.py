@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from .gamestats import GameStats
 import traceback
 
-JIRA_API_URL = "https://statsapi.web.nhl.com/api/v1/"
+NHL_API_URL = "https://statsapi.web.nhl.com/api/v1/"
 
 class GameListStats:
 
@@ -24,7 +24,7 @@ class GameListStats:
 
     def think(self, log_live_result: bool = False):
         self.logger.info(f'{self.start_date=}, {self.end_date=}')
-        URL = JIRA_API_URL + "schedule?startDate=" + self.start_date + "&endDate=" + self.end_date
+        URL = NHL_API_URL + "schedule?startDate=" + self.start_date + "&endDate=" + self.end_date
 
         if (self.logger is not None):
             self.logger.info("getting list: " + URL)
@@ -61,7 +61,7 @@ class GameListStats:
                             "name": game_item["teams"]["away"]["team"]["name"],
                         }
 
-                        game_URL = JIRA_API_URL + "game/" + str(game_id) + "/feed/live"
+                        game_URL = NHL_API_URL + "game/" + str(game_id) + "/feed/live"
 
                         if (self.logger is not None):
                             self.logger.info("checking game: " + str(game_id))
