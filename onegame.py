@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import requests, json, sys
-from datetime import datetime, timedelta
+import requests
+import sys
 from lib.gamestats import GameStats
 
 JIRA_API_URL = "https://statsapi.web.nhl.com/api/v1/"
