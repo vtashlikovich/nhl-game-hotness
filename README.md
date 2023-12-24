@@ -2,15 +2,15 @@
 
 ## About
 
-If you love hockey, NHL, if you track your favorite teams' progress but eager to see any really __hot__ game replay... But you are stuck to determine which one is good? This tool will help.
+If you love hockey, NHL, if you track your favorite teams' progress but eager to see any really __hot__ game replays... But you are stuck to determine which one is good? This tool will help.
 
-This python CLI utility analyzes NHL game data and calculates hottness points. If you see _HOT_ next to the game - that's worth seeing. If you get _WOW!_ next to the game - you must watch this.
+This python CLI utility analyzes NHL game data and calculates hottness points. If you see _HOT_ next to the game - that's worth seeing. If you get _WOW!_ next to the game - you __must__ watch this.
 
 ![NHL game hottness log](i/log_screen.png)
 
 ## How scoring is done
 
-Scoring is calculated on the base of data provided by public NHL API (https://statsapi.web.nhl.com).
+Scoring is calculated on the base of data provided by public NHL API (https://api-web.nhle.com/v1/).
 
 _gamestats.py_ lib uses the following metrics to get points for each game.
 
@@ -36,7 +36,7 @@ __Last chance 5__. When OT set up in the 5 seconds.
 
 __Late winner__. Winning goal in the last 15 seconds of OT.
 
-__Tight win__. Both teams score 3+, regular ends with 1 puck difference only.
+__Tight win__. Both teams score 2+, regular ends with 1 puck difference only.
 
 __Late tight win__. Tight win and the winning goal is within the last minute or 20 seconds of the 3rd.
 
