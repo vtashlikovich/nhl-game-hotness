@@ -1,0 +1,1470 @@
+{
+  "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2021. All Rights Reserved.",
+  "stats" : [ {
+    "type" : {
+      "displayName" : "gameLog",
+      "gameType" : null
+    },
+    "splits" : [ {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "27:07",
+        "assists" : 0,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 6,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "10:00",
+        "evenTimeOnIce" : "17:07",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : -2,
+        "points" : 0,
+        "shifts" : 24
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 26,
+        "name" : "Los Angeles Kings",
+        "link" : "/api/v1/teams/26"
+      },
+      "date" : "2021-12-19",
+      "isHome" : true,
+      "isWin" : false,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020484,
+        "link" : "/api/v1/game/2021020484/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020484/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "20:30",
+        "assists" : 0,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 8,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "03:49",
+        "evenTimeOnIce" : "16:34",
+        "penaltyMinutes" : "0",
+        "shotPct" : 12.5,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:07",
+        "blocked" : 0,
+        "plusMinus" : 1,
+        "points" : 1,
+        "shifts" : 24
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 52,
+        "name" : "Winnipeg Jets",
+        "link" : "/api/v1/teams/52"
+      },
+      "date" : "2021-12-17",
+      "isHome" : false,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020469,
+        "link" : "/api/v1/game/2021020469/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020469/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "21:51",
+        "assists" : 1,
+        "goals" : 1,
+        "pim" : 2,
+        "shots" : 10,
+        "games" : 1,
+        "hits" : 2,
+        "powerPlayGoals" : 1,
+        "powerPlayPoints" : 1,
+        "powerPlayTimeOnIce" : "05:08",
+        "evenTimeOnIce" : "16:43",
+        "penaltyMinutes" : "2",
+        "shotPct" : 10.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 0,
+        "points" : 2,
+        "shifts" : 22
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 16,
+        "name" : "Chicago Blackhawks",
+        "link" : "/api/v1/teams/16"
+      },
+      "date" : "2021-12-15",
+      "isHome" : false,
+      "isWin" : false,
+      "isOT" : true,
+      "game" : {
+        "gamePk" : 2021020451,
+        "link" : "/api/v1/game/2021020451/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020451/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "25:36",
+        "assists" : 1,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 6,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "06:00",
+        "evenTimeOnIce" : "19:36",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 0,
+        "points" : 1,
+        "shifts" : 21
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 7,
+        "name" : "Buffalo Sabres",
+        "link" : "/api/v1/teams/7"
+      },
+      "date" : "2021-12-11",
+      "isHome" : false,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020419,
+        "link" : "/api/v1/game/2021020419/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020419/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "25:21",
+        "assists" : 2,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 4,
+        "games" : 1,
+        "hits" : 4,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "04:00",
+        "evenTimeOnIce" : "21:21",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 0,
+        "points" : 2,
+        "shifts" : 22
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 5,
+        "name" : "Pittsburgh Penguins",
+        "link" : "/api/v1/teams/5"
+      },
+      "date" : "2021-12-10",
+      "isHome" : true,
+      "isWin" : false,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020414,
+        "link" : "/api/v1/game/2021020414/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020414/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "23:25",
+        "assists" : 2,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 7,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "02:00",
+        "evenTimeOnIce" : "21:25",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 0,
+        "points" : 2,
+        "shifts" : 25
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 24,
+        "name" : "Anaheim Ducks",
+        "link" : "/api/v1/teams/24"
+      },
+      "date" : "2021-12-06",
+      "isHome" : true,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020384,
+        "link" : "/api/v1/game/2021020384/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020384/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "22:38",
+        "assists" : 0,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 2,
+        "games" : 1,
+        "hits" : 1,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "02:00",
+        "evenTimeOnIce" : "20:38",
+        "penaltyMinutes" : "0",
+        "shotPct" : 50.0,
+        "gameWinningGoals" : 1,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 1,
+        "plusMinus" : 2,
+        "points" : 1,
+        "shifts" : 26
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 29,
+        "name" : "Columbus Blue Jackets",
+        "link" : "/api/v1/teams/29"
+      },
+      "date" : "2021-12-04",
+      "isHome" : true,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020372,
+        "link" : "/api/v1/game/2021020372/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020372/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "19:59",
+        "assists" : 1,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 4,
+        "games" : 1,
+        "hits" : 3,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "02:00",
+        "evenTimeOnIce" : "17:59",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 1,
+        "points" : 1,
+        "shifts" : 26
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 16,
+        "name" : "Chicago Blackhawks",
+        "link" : "/api/v1/teams/16"
+      },
+      "date" : "2021-12-02",
+      "isHome" : true,
+      "isWin" : false,
+      "isOT" : true,
+      "game" : {
+        "gamePk" : 2021020356,
+        "link" : "/api/v1/game/2021020356/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020356/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "20:23",
+        "assists" : 0,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 3,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "03:43",
+        "evenTimeOnIce" : "16:40",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : -1,
+        "points" : 0,
+        "shifts" : 24
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 13,
+        "name" : "Florida Panthers",
+        "link" : "/api/v1/teams/13"
+      },
+      "date" : "2021-11-30",
+      "isHome" : false,
+      "isWin" : false,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020338,
+        "link" : "/api/v1/game/2021020338/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020338/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "23:32",
+        "assists" : 0,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 4,
+        "games" : 1,
+        "hits" : 1,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "07:43",
+        "evenTimeOnIce" : "15:49",
+        "penaltyMinutes" : "0",
+        "faceOffPct" : 0.0,
+        "shotPct" : 25.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 1,
+        "points" : 1,
+        "shifts" : 23
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 12,
+        "name" : "Carolina Hurricanes",
+        "link" : "/api/v1/teams/12"
+      },
+      "date" : "2021-11-28",
+      "isHome" : false,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020329,
+        "link" : "/api/v1/game/2021020329/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020329/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "22:30",
+        "assists" : 0,
+        "goals" : 3,
+        "pim" : 2,
+        "shots" : 5,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 1,
+        "powerPlayPoints" : 1,
+        "powerPlayTimeOnIce" : "04:35",
+        "evenTimeOnIce" : "17:55",
+        "penaltyMinutes" : "2",
+        "faceOffPct" : 100.0,
+        "shotPct" : 60.0,
+        "gameWinningGoals" : 1,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 1,
+        "plusMinus" : 1,
+        "points" : 3,
+        "shifts" : 26
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 13,
+        "name" : "Florida Panthers",
+        "link" : "/api/v1/teams/13"
+      },
+      "date" : "2021-11-26",
+      "isHome" : true,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020309,
+        "link" : "/api/v1/game/2021020309/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020309/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "21:00",
+        "assists" : 3,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 4,
+        "games" : 1,
+        "hits" : 2,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 1,
+        "powerPlayTimeOnIce" : "01:08",
+        "evenTimeOnIce" : "19:52",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 2,
+        "points" : 3,
+        "shifts" : 23
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 8,
+        "name" : "Montréal Canadiens",
+        "link" : "/api/v1/teams/8"
+      },
+      "date" : "2021-11-24",
+      "isHome" : true,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020296,
+        "link" : "/api/v1/game/2021020296/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020296/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "24:01",
+        "assists" : 0,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 6,
+        "games" : 1,
+        "hits" : 3,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "07:42",
+        "evenTimeOnIce" : "16:19",
+        "penaltyMinutes" : "0",
+        "shotPct" : 16.7,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : -1,
+        "points" : 1,
+        "shifts" : 24
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 55,
+        "name" : "Seattle Kraken",
+        "link" : "/api/v1/teams/55"
+      },
+      "date" : "2021-11-21",
+      "isHome" : false,
+      "isWin" : false,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020280,
+        "link" : "/api/v1/game/2021020280/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020280/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "18:47",
+        "assists" : 1,
+        "goals" : 2,
+        "pim" : 0,
+        "shots" : 4,
+        "games" : 1,
+        "hits" : 1,
+        "powerPlayGoals" : 1,
+        "powerPlayPoints" : 1,
+        "powerPlayTimeOnIce" : "02:55",
+        "evenTimeOnIce" : "15:52",
+        "penaltyMinutes" : "0",
+        "shotPct" : 50.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 2,
+        "points" : 3,
+        "shifts" : 21
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 28,
+        "name" : "San Jose Sharks",
+        "link" : "/api/v1/teams/28"
+      },
+      "date" : "2021-11-20",
+      "isHome" : false,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020273,
+        "link" : "/api/v1/game/2021020273/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020273/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "21:36",
+        "assists" : 0,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 6,
+        "games" : 1,
+        "hits" : 1,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "04:00",
+        "evenTimeOnIce" : "17:36",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 0,
+        "points" : 0,
+        "shifts" : 24
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 26,
+        "name" : "Los Angeles Kings",
+        "link" : "/api/v1/teams/26"
+      },
+      "date" : "2021-11-17",
+      "isHome" : false,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020245,
+        "link" : "/api/v1/game/2021020245/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020245/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "21:40",
+        "assists" : 0,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 1,
+        "games" : 1,
+        "hits" : 6,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "00:00",
+        "evenTimeOnIce" : "21:40",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : -2,
+        "points" : 0,
+        "shifts" : 26
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 24,
+        "name" : "Anaheim Ducks",
+        "link" : "/api/v1/teams/24"
+      },
+      "date" : "2021-11-16",
+      "isHome" : false,
+      "isWin" : false,
+      "isOT" : true,
+      "game" : {
+        "gamePk" : 2021020243,
+        "link" : "/api/v1/game/2021020243/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020243/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "18:35",
+        "assists" : 2,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 1,
+        "games" : 1,
+        "hits" : 3,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "03:50",
+        "evenTimeOnIce" : "14:44",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:01",
+        "blocked" : 0,
+        "plusMinus" : 2,
+        "points" : 2,
+        "shifts" : 20
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 5,
+        "name" : "Pittsburgh Penguins",
+        "link" : "/api/v1/teams/5"
+      },
+      "date" : "2021-11-14",
+      "isHome" : true,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020227,
+        "link" : "/api/v1/game/2021020227/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020227/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "21:54",
+        "assists" : 1,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 4,
+        "games" : 1,
+        "hits" : 2,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "01:35",
+        "evenTimeOnIce" : "20:19",
+        "penaltyMinutes" : "0",
+        "shotPct" : 25.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 2,
+        "points" : 2,
+        "shifts" : 23
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 29,
+        "name" : "Columbus Blue Jackets",
+        "link" : "/api/v1/teams/29"
+      },
+      "date" : "2021-11-12",
+      "isHome" : false,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020209,
+        "link" : "/api/v1/game/2021020209/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020209/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "22:04",
+        "assists" : 1,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 0,
+        "games" : 1,
+        "hits" : 1,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "06:11",
+        "evenTimeOnIce" : "15:49",
+        "penaltyMinutes" : "0",
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:04",
+        "blocked" : 0,
+        "plusMinus" : 1,
+        "points" : 1,
+        "shifts" : 20
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 17,
+        "name" : "Detroit Red Wings",
+        "link" : "/api/v1/teams/17"
+      },
+      "date" : "2021-11-11",
+      "isHome" : false,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020198,
+        "link" : "/api/v1/game/2021020198/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020198/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "24:19",
+        "assists" : 2,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 6,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 1,
+        "powerPlayTimeOnIce" : "05:02",
+        "evenTimeOnIce" : "19:17",
+        "penaltyMinutes" : "0",
+        "shotPct" : 16.7,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 1,
+        "points" : 3,
+        "shifts" : 26
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 7,
+        "name" : "Buffalo Sabres",
+        "link" : "/api/v1/teams/7"
+      },
+      "date" : "2021-11-08",
+      "isHome" : true,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020181,
+        "link" : "/api/v1/game/2021020181/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020181/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "22:16",
+        "assists" : 0,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 6,
+        "games" : 1,
+        "hits" : 2,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "05:23",
+        "evenTimeOnIce" : "16:53",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : -1,
+        "points" : 0,
+        "shifts" : 22
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 4,
+        "name" : "Philadelphia Flyers",
+        "link" : "/api/v1/teams/4"
+      },
+      "date" : "2021-11-06",
+      "isHome" : true,
+      "isWin" : false,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020168,
+        "link" : "/api/v1/game/2021020168/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020168/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "22:10",
+        "assists" : 2,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 6,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "03:53",
+        "evenTimeOnIce" : "18:17",
+        "penaltyMinutes" : "0",
+        "shotPct" : 16.7,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 1,
+        "plusMinus" : 2,
+        "points" : 3,
+        "shifts" : 25
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 13,
+        "name" : "Florida Panthers",
+        "link" : "/api/v1/teams/13"
+      },
+      "date" : "2021-11-04",
+      "isHome" : false,
+      "isWin" : false,
+      "isOT" : true,
+      "game" : {
+        "gamePk" : 2021020152,
+        "link" : "/api/v1/game/2021020152/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020152/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "22:20",
+        "assists" : 0,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 6,
+        "games" : 1,
+        "hits" : 1,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "06:05",
+        "evenTimeOnIce" : "16:12",
+        "penaltyMinutes" : "0",
+        "faceOffPct" : 0.0,
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:03",
+        "blocked" : 0,
+        "plusMinus" : 0,
+        "points" : 0,
+        "shifts" : 27
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 14,
+        "name" : "Tampa Bay Lightning",
+        "link" : "/api/v1/teams/14"
+      },
+      "date" : "2021-11-01",
+      "isHome" : false,
+      "isWin" : false,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020132,
+        "link" : "/api/v1/game/2021020132/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020132/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "24:43",
+        "assists" : 1,
+        "goals" : 1,
+        "pim" : 2,
+        "shots" : 5,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 1,
+        "powerPlayTimeOnIce" : "09:00",
+        "evenTimeOnIce" : "15:43",
+        "penaltyMinutes" : "2",
+        "faceOffPct" : 100.0,
+        "shotPct" : 20.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 1,
+        "plusMinus" : 1,
+        "points" : 2,
+        "shifts" : 20
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 53,
+        "name" : "Arizona Coyotes",
+        "link" : "/api/v1/teams/53"
+      },
+      "date" : "2021-10-29",
+      "isHome" : true,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020113,
+        "link" : "/api/v1/game/2021020113/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020113/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "24:10",
+        "assists" : 0,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 5,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 1,
+        "powerPlayPoints" : 1,
+        "powerPlayTimeOnIce" : "05:51",
+        "evenTimeOnIce" : "18:08",
+        "penaltyMinutes" : "0",
+        "shotPct" : 20.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:11",
+        "blocked" : 0,
+        "plusMinus" : 0,
+        "points" : 1,
+        "shifts" : 21
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 17,
+        "name" : "Detroit Red Wings",
+        "link" : "/api/v1/teams/17"
+      },
+      "date" : "2021-10-27",
+      "isHome" : true,
+      "isWin" : false,
+      "isOT" : true,
+      "game" : {
+        "gamePk" : 2021020098,
+        "link" : "/api/v1/game/2021020098/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020098/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "19:34",
+        "assists" : 0,
+        "goals" : 2,
+        "pim" : 0,
+        "shots" : 6,
+        "games" : 1,
+        "hits" : 3,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "02:00",
+        "evenTimeOnIce" : "17:21",
+        "penaltyMinutes" : "0",
+        "shotPct" : 33.3,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:13",
+        "blocked" : 1,
+        "plusMinus" : 1,
+        "points" : 2,
+        "shifts" : 25
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 9,
+        "name" : "Ottawa Senators",
+        "link" : "/api/v1/teams/9"
+      },
+      "date" : "2021-10-25",
+      "isHome" : false,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020084,
+        "link" : "/api/v1/game/2021020084/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020084/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "20:30",
+        "assists" : 1,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 4,
+        "games" : 1,
+        "hits" : 3,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "07:09",
+        "evenTimeOnIce" : "13:21",
+        "penaltyMinutes" : "0",
+        "shotPct" : 25.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 1,
+        "plusMinus" : -1,
+        "points" : 2,
+        "shifts" : 22
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 20,
+        "name" : "Calgary Flames",
+        "link" : "/api/v1/teams/20"
+      },
+      "date" : "2021-10-23",
+      "isHome" : true,
+      "isWin" : false,
+      "isOT" : true,
+      "game" : {
+        "gamePk" : 2021020072,
+        "link" : "/api/v1/game/2021020072/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020072/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "19:50",
+        "assists" : 2,
+        "goals" : 0,
+        "pim" : 0,
+        "shots" : 3,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "04:58",
+        "evenTimeOnIce" : "14:52",
+        "penaltyMinutes" : "0",
+        "shotPct" : 0.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 2,
+        "points" : 2,
+        "shifts" : 22
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 1,
+        "name" : "New Jersey Devils",
+        "link" : "/api/v1/teams/1"
+      },
+      "date" : "2021-10-21",
+      "isHome" : false,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020056,
+        "link" : "/api/v1/game/2021020056/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020056/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "17:21",
+        "assists" : 0,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 2,
+        "games" : 1,
+        "hits" : 0,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "03:34",
+        "evenTimeOnIce" : "13:47",
+        "penaltyMinutes" : "0",
+        "shotPct" : 50.0,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 3,
+        "points" : 1,
+        "shifts" : 19
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 21,
+        "name" : "Colorado Avalanche",
+        "link" : "/api/v1/teams/21"
+      },
+      "date" : "2021-10-19",
+      "isHome" : true,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020045,
+        "link" : "/api/v1/game/2021020045/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020045/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "23:43",
+        "assists" : 0,
+        "goals" : 1,
+        "pim" : 0,
+        "shots" : 8,
+        "games" : 1,
+        "hits" : 2,
+        "powerPlayGoals" : 0,
+        "powerPlayPoints" : 0,
+        "powerPlayTimeOnIce" : "07:22",
+        "evenTimeOnIce" : "16:21",
+        "penaltyMinutes" : "0",
+        "shotPct" : 12.5,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 0,
+        "shortHandedPoints" : 0,
+        "shortHandedTimeOnIce" : "00:00",
+        "blocked" : 0,
+        "plusMinus" : 0,
+        "points" : 1,
+        "shifts" : 23
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 14,
+        "name" : "Tampa Bay Lightning",
+        "link" : "/api/v1/teams/14"
+      },
+      "date" : "2021-10-16",
+      "isHome" : true,
+      "isWin" : false,
+      "isOT" : true,
+      "game" : {
+        "gamePk" : 2021020027,
+        "link" : "/api/v1/game/2021020027/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020027/content"
+        }
+      }
+    }, {
+      "season" : "20212022",
+      "stat" : {
+        "timeOnIce" : "20:17",
+        "assists" : 2,
+        "goals" : 2,
+        "pim" : 0,
+        "shots" : 3,
+        "games" : 1,
+        "hits" : 1,
+        "powerPlayGoals" : 1,
+        "powerPlayPoints" : 3,
+        "powerPlayTimeOnIce" : "06:07",
+        "evenTimeOnIce" : "14:05",
+        "penaltyMinutes" : "0",
+        "shotPct" : 66.7,
+        "gameWinningGoals" : 0,
+        "overTimeGoals" : 0,
+        "shortHandedGoals" : 1,
+        "shortHandedPoints" : 1,
+        "shortHandedTimeOnIce" : "00:05",
+        "blocked" : 1,
+        "plusMinus" : 1,
+        "points" : 4,
+        "shifts" : 24
+      },
+      "team" : {
+        "id" : 15,
+        "name" : "Washington Capitals",
+        "link" : "/api/v1/teams/15"
+      },
+      "opponent" : {
+        "id" : 3,
+        "name" : "New York Rangers",
+        "link" : "/api/v1/teams/3"
+      },
+      "date" : "2021-10-13",
+      "isHome" : true,
+      "isWin" : true,
+      "isOT" : false,
+      "game" : {
+        "gamePk" : 2021020004,
+        "link" : "/api/v1/game/2021020004/feed/live",
+        "content" : {
+          "link" : "/api/v1/game/2021020004/content"
+        }
+      }
+    } ]
+  } ]
+}

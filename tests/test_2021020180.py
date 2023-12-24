@@ -1,20 +1,13 @@
 import pytest
-import json
 import sys
 import os
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 from lib import GameStats, POINTS_WALL, POINTS_TIGHT_WIN
+from utils import load_game, get_found_point_types
 
-# the wall, tight win
+# the wall, tight win2
 game_id = 2021020180
-
-def load_game(game_id, file_postfix=''):
-    result = None
-    with open('samples/' + str(game_id) + file_postfix + '.json') as game_file:
-        result = json.loads(game_file.read())
-    return result
-
 
 @pytest.fixture
 def game_stats():
@@ -24,10 +17,8 @@ def game_stats():
 
 def test_find_wall(game_stats):
     game_stats.find_the_wall()
-    point_types = [k['code'] for k in game_stats.getPoints()]
-    assert POINTS_WALL in point_types
+    assert POINTS_WALL in get_found_point_types(game_stats)
 
-def test_find_tight_win(game_stats):
-    game_stats.find_tight_win()
-    point_types = [k['code'] for k in game_stats.getPoints()]
-    assert POINTS_TIGHT_WIN in point_types
+def test_find_tight_win2(game_stats):
+    game_stats.find_tight_win2()
+    assert POINTS_TIGHT_WIN in get_found_point_types(game_stats)

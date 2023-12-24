@@ -1,0 +1,23 @@
+import requests
+
+API_URL = "https://statsapi.web.nhl.com/api/v1"
+
+response = requests.get(API_URL + "/game/2021020582/feed/live", params={"Content-Type": "application/json"})
+data = response.json()
+
+regular_goals_data = filter(
+    lambda x: x["about"]["periodType"] == "REGULAR"
+    and x["result"]["eventTypeId"] == "GOAL",
+    data["liveData"]["plays"]["allPlays"],
+)
+
+all_regular_goals = [x["about"]["goals"] for x in regular_goals_data]
+
+equal_score = []
+for item in all_regular_goals:
+    if item["home"] == item["away"]:
+        equal_score.append(item["home"])
+
+print("Equal score found:", len(equal_score))
+for score in equal_score:
+    print("-", f'{score}:{score}')

@@ -8,11 +8,12 @@ import traceback
 game_path = ''
 stats_path = ''
 
-if len(sys.argv) > 2:
-    game_path = sys.argv[1]
-    stats_path = sys.argv[2]
+if len(sys.argv) > 1:
+    game_id = sys.argv[1]
+    game_path = f'samples/{game_id}.json'
+    stats_path = f'samples/{game_id}.boxscore.json'
 else:
-    print('files paths are needed')
+    print('game id is needed')
     exit(1)
 
 print(f'Check game {game_path} hotness')

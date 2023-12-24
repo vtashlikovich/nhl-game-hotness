@@ -1,0 +1,2682 @@
+{
+  "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2021. All Rights Reserved.",
+  "totalItems" : 12,
+  "totalEvents" : 0,
+  "totalGames" : 12,
+  "totalMatches" : 0,
+  "metaData" : {
+    "timeStamp" : "20211230_165323"
+  },
+  "wait" : 10,
+  "dates" : [ {
+    "date" : "2021-12-04",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020376,
+      "link" : "/api/v1/game/2021020376/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-05T03:00:00Z",
+      "status" : {
+        "abstractGameState" : "Final",
+        "codedGameState" : "7",
+        "detailedState" : "Final",
+        "statusCode" : "7",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 11,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 4,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 8,
+            "losses" : 15,
+            "ot" : 2,
+            "type" : "league"
+          },
+          "score" : 1,
+          "team" : {
+            "id" : 23,
+            "name" : "Vancouver Canucks",
+            "link" : "/api/v1/teams/23",
+            "venue" : {
+              "id" : 5073,
+              "name" : "Rogers Arena",
+              "link" : "/api/v1/venues/5073",
+              "city" : "Vancouver",
+              "timeZone" : {
+                "id" : "America/Vancouver",
+                "offset" : -8,
+                "tz" : "PST"
+              }
+            },
+            "abbreviation" : "VAN",
+            "teamName" : "Canucks",
+            "locationName" : "Vancouver",
+            "firstYearOfPlay" : "1970",
+            "division" : {
+              "id" : 15,
+              "name" : "Pacific",
+              "nameShort" : "PAC",
+              "link" : "/api/v1/divisions/15",
+              "abbreviation" : "P"
+            },
+            "conference" : {
+              "id" : 5,
+              "name" : "Western",
+              "link" : "/api/v1/conferences/5"
+            },
+            "franchise" : {
+              "franchiseId" : 20,
+              "teamName" : "Canucks",
+              "link" : "/api/v1/franchises/20"
+            },
+            "shortName" : "Vancouver",
+            "officialSiteUrl" : "http://www.canucks.com/",
+            "franchiseId" : 20,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 3,
+        "currentPeriodOrdinal" : "3rd",
+        "currentPeriodTimeRemaining" : "Final",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-05T03:11:13Z",
+          "endTime" : "2021-12-05T03:44:10Z",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 7,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 12,
+            "rinkSide" : "left"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-05T04:03:10Z",
+          "endTime" : "2021-12-05T04:40:09Z",
+          "num" : 2,
+          "ordinalNum" : "2nd",
+          "home" : {
+            "goals" : 1,
+            "shotsOnGoal" : 5,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 3,
+            "shotsOnGoal" : 22,
+            "rinkSide" : "right"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-05T04:58:56Z",
+          "endTime" : "2021-12-05T05:35:08Z",
+          "num" : 3,
+          "ordinalNum" : "3rd",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 11,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 1,
+            "shotsOnGoal" : 10,
+            "rinkSide" : "left"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 23,
+              "name" : "Vancouver Canucks",
+              "link" : "/api/v1/teams/23"
+            },
+            "goals" : 1,
+            "shotsOnGoal" : 23,
+            "goaliePulled" : false,
+            "numSkaters" : 4,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 4,
+            "shotsOnGoal" : 44,
+            "goaliePulled" : false,
+            "numSkaters" : 4,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        },
+        "powerPlayInfo" : {
+          "situationTimeRemaining" : 118,
+          "situationTimeElapsed" : 0,
+          "inSituation" : true
+        }
+      },
+      "venue" : {
+        "id" : 5073,
+        "name" : "Rogers Arena",
+        "link" : "/api/v1/venues/5073"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020376/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-06",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020387,
+      "link" : "/api/v1/game/2021020387/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-07T03:00:00Z",
+      "status" : {
+        "abstractGameState" : "Final",
+        "codedGameState" : "7",
+        "detailedState" : "Final",
+        "statusCode" : "7",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 12,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 6,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 9,
+            "losses" : 14,
+            "ot" : 2,
+            "type" : "league"
+          },
+          "score" : 1,
+          "team" : {
+            "id" : 55,
+            "name" : "Seattle Kraken",
+            "link" : "/api/v1/teams/55",
+            "venue" : {
+              "name" : "Climate Pledge Arena",
+              "link" : "/api/v1/venues/null",
+              "city" : "Seattle",
+              "timeZone" : {
+                "id" : "America/Los_Angeles",
+                "offset" : -8,
+                "tz" : "PST"
+              }
+            },
+            "abbreviation" : "SEA",
+            "teamName" : "Kraken",
+            "locationName" : "Seattle",
+            "firstYearOfPlay" : "2021",
+            "division" : {
+              "id" : 15,
+              "name" : "Pacific",
+              "nameShort" : "PAC",
+              "link" : "/api/v1/divisions/15",
+              "abbreviation" : "P"
+            },
+            "conference" : {
+              "id" : 5,
+              "name" : "Western",
+              "link" : "/api/v1/conferences/5"
+            },
+            "franchise" : {
+              "franchiseId" : 39,
+              "teamName" : "Kraken",
+              "link" : "/api/v1/franchises/39"
+            },
+            "shortName" : "Seattle",
+            "officialSiteUrl" : "https://www.nhl.com/seattle",
+            "franchiseId" : 39,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 3,
+        "currentPeriodOrdinal" : "3rd",
+        "currentPeriodTimeRemaining" : "Final",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-07T03:09:17Z",
+          "endTime" : "2021-12-07T03:41:50Z",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 10,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 3,
+            "shotsOnGoal" : 8,
+            "rinkSide" : "right"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-07T04:00:53Z",
+          "endTime" : "2021-12-07T04:39:33Z",
+          "num" : 2,
+          "ordinalNum" : "2nd",
+          "home" : {
+            "goals" : 1,
+            "shotsOnGoal" : 9,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 2,
+            "shotsOnGoal" : 13,
+            "rinkSide" : "left"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-07T04:58:25Z",
+          "endTime" : "2021-12-07T05:33:37Z",
+          "num" : 3,
+          "ordinalNum" : "3rd",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 10,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 1,
+            "shotsOnGoal" : 10,
+            "rinkSide" : "right"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 55,
+              "name" : "Seattle Kraken",
+              "link" : "/api/v1/teams/55"
+            },
+            "goals" : 1,
+            "shotsOnGoal" : 29,
+            "goaliePulled" : false,
+            "numSkaters" : 5,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 6,
+            "shotsOnGoal" : 31,
+            "goaliePulled" : false,
+            "numSkaters" : 5,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        },
+        "powerPlayInfo" : {
+          "situationTimeRemaining" : 0,
+          "situationTimeElapsed" : 0,
+          "inSituation" : false
+        }
+      },
+      "venue" : {
+        "name" : "Climate Pledge Arena",
+        "link" : "/api/v1/venues/null"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020387/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-10",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020414,
+      "link" : "/api/v1/game/2021020414/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-11T00:00:00Z",
+      "status" : {
+        "abstractGameState" : "Final",
+        "codedGameState" : "7",
+        "detailedState" : "Final",
+        "statusCode" : "7",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 13,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 4,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 16,
+            "losses" : 5,
+            "ot" : 6,
+            "type" : "league"
+          },
+          "score" : 2,
+          "team" : {
+            "id" : 15,
+            "name" : "Washington Capitals",
+            "link" : "/api/v1/teams/15",
+            "venue" : {
+              "id" : 5094,
+              "name" : "Capital One Arena",
+              "link" : "/api/v1/venues/5094",
+              "city" : "Washington",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "WSH",
+            "teamName" : "Capitals",
+            "locationName" : "Washington",
+            "firstYearOfPlay" : "1974",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 24,
+              "teamName" : "Capitals",
+              "link" : "/api/v1/franchises/24"
+            },
+            "shortName" : "Washington",
+            "officialSiteUrl" : "http://www.washingtoncapitals.com/",
+            "franchiseId" : 24,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 3,
+        "currentPeriodOrdinal" : "3rd",
+        "currentPeriodTimeRemaining" : "Final",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-11T00:05:41Z",
+          "endTime" : "2021-12-11T00:38:45Z",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 6,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 1,
+            "shotsOnGoal" : 11,
+            "rinkSide" : "left"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-11T00:57:25Z",
+          "endTime" : "2021-12-11T01:36:21Z",
+          "num" : 2,
+          "ordinalNum" : "2nd",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 12,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 2,
+            "shotsOnGoal" : 11,
+            "rinkSide" : "right"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-11T01:55:37Z",
+          "endTime" : "2021-12-11T02:35:16Z",
+          "num" : 3,
+          "ordinalNum" : "3rd",
+          "home" : {
+            "goals" : 2,
+            "shotsOnGoal" : 13,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 1,
+            "shotsOnGoal" : 11,
+            "rinkSide" : "left"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 15,
+              "name" : "Washington Capitals",
+              "link" : "/api/v1/teams/15"
+            },
+            "goals" : 2,
+            "shotsOnGoal" : 31,
+            "goaliePulled" : false,
+            "numSkaters" : 5,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 4,
+            "shotsOnGoal" : 33,
+            "goaliePulled" : false,
+            "numSkaters" : 5,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        },
+        "powerPlayInfo" : {
+          "situationTimeRemaining" : 0,
+          "situationTimeElapsed" : 0,
+          "inSituation" : false
+        }
+      },
+      "venue" : {
+        "id" : 5094,
+        "name" : "Capital One Arena",
+        "link" : "/api/v1/venues/5094"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020414/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-11",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020423,
+      "link" : "/api/v1/game/2021020423/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-12T00:00:00Z",
+      "status" : {
+        "abstractGameState" : "Final",
+        "codedGameState" : "7",
+        "detailedState" : "Final",
+        "statusCode" : "7",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 15,
+            "losses" : 9,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 24,
+            "name" : "Anaheim Ducks",
+            "link" : "/api/v1/teams/24",
+            "venue" : {
+              "id" : 5046,
+              "name" : "Honda Center",
+              "link" : "/api/v1/venues/5046",
+              "city" : "Anaheim",
+              "timeZone" : {
+                "id" : "America/Los_Angeles",
+                "offset" : -8,
+                "tz" : "PST"
+              }
+            },
+            "abbreviation" : "ANA",
+            "teamName" : "Ducks",
+            "locationName" : "Anaheim",
+            "firstYearOfPlay" : "1993",
+            "division" : {
+              "id" : 15,
+              "name" : "Pacific",
+              "nameShort" : "PAC",
+              "link" : "/api/v1/divisions/15",
+              "abbreviation" : "P"
+            },
+            "conference" : {
+              "id" : 5,
+              "name" : "Western",
+              "link" : "/api/v1/conferences/5"
+            },
+            "franchise" : {
+              "franchiseId" : 32,
+              "teamName" : "Ducks",
+              "link" : "/api/v1/franchises/32"
+            },
+            "shortName" : "Anaheim",
+            "officialSiteUrl" : "http://www.anaheimducks.com/",
+            "franchiseId" : 32,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 14,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 1,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 3,
+        "currentPeriodOrdinal" : "3rd",
+        "currentPeriodTimeRemaining" : "Final",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-12T00:08:52Z",
+          "endTime" : "2021-12-12T00:42:55Z",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 1,
+            "shotsOnGoal" : 6,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 8,
+            "rinkSide" : "right"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-12T01:01:58Z",
+          "endTime" : "2021-12-12T01:35:38Z",
+          "num" : 2,
+          "ordinalNum" : "2nd",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 10,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 12,
+            "rinkSide" : "left"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-12T01:54:34Z",
+          "endTime" : "2021-12-12T02:29:15Z",
+          "num" : 3,
+          "ordinalNum" : "3rd",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 13,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 13,
+            "rinkSide" : "right"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 1,
+            "shotsOnGoal" : 29,
+            "goaliePulled" : false,
+            "numSkaters" : 5,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 24,
+              "name" : "Anaheim Ducks",
+              "link" : "/api/v1/teams/24"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 33,
+            "goaliePulled" : false,
+            "numSkaters" : 5,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        },
+        "powerPlayInfo" : {
+          "situationTimeRemaining" : 0,
+          "situationTimeElapsed" : 0,
+          "inSituation" : false
+        }
+      },
+      "venue" : {
+        "id" : 5034,
+        "name" : "PPG Paints Arena",
+        "link" : "/api/v1/venues/5034"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020423/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-14",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020442,
+      "link" : "/api/v1/game/2021020442/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-15T00:00:00Z",
+      "status" : {
+        "abstractGameState" : "Final",
+        "codedGameState" : "7",
+        "detailedState" : "Final",
+        "statusCode" : "7",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 6,
+            "losses" : 21,
+            "ot" : 3,
+            "type" : "league"
+          },
+          "score" : 2,
+          "team" : {
+            "id" : 8,
+            "name" : "Montréal Canadiens",
+            "link" : "/api/v1/teams/8",
+            "venue" : {
+              "id" : 5028,
+              "name" : "Bell Centre",
+              "link" : "/api/v1/venues/5028",
+              "city" : "Montréal",
+              "timeZone" : {
+                "id" : "America/Montreal",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "MTL",
+            "teamName" : "Canadiens",
+            "locationName" : "Montréal",
+            "firstYearOfPlay" : "1917",
+            "division" : {
+              "id" : 17,
+              "name" : "Atlantic",
+              "nameShort" : "ATL",
+              "link" : "/api/v1/divisions/17",
+              "abbreviation" : "A"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 1,
+              "teamName" : "Canadiens",
+              "link" : "/api/v1/franchises/1"
+            },
+            "shortName" : "Montréal",
+            "officialSiteUrl" : "http://www.canadiens.com/",
+            "franchiseId" : 1,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 15,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 5,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 3,
+        "currentPeriodOrdinal" : "3rd",
+        "currentPeriodTimeRemaining" : "Final",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-15T00:08:20Z",
+          "endTime" : "2021-12-15T00:41:49Z",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 1,
+            "shotsOnGoal" : 8,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 7,
+            "rinkSide" : "right"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-15T01:00:42Z",
+          "endTime" : "2021-12-15T01:36:47Z",
+          "num" : 2,
+          "ordinalNum" : "2nd",
+          "home" : {
+            "goals" : 2,
+            "shotsOnGoal" : 18,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 2,
+            "shotsOnGoal" : 8,
+            "rinkSide" : "left"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-15T01:55:34Z",
+          "endTime" : "2021-12-15T02:31:07Z",
+          "num" : 3,
+          "ordinalNum" : "3rd",
+          "home" : {
+            "goals" : 2,
+            "shotsOnGoal" : 5,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 15,
+            "rinkSide" : "right"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 5,
+            "shotsOnGoal" : 31,
+            "goaliePulled" : false,
+            "numSkaters" : 5,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 8,
+              "name" : "Montréal Canadiens",
+              "link" : "/api/v1/teams/8"
+            },
+            "goals" : 2,
+            "shotsOnGoal" : 30,
+            "goaliePulled" : false,
+            "numSkaters" : 5,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        },
+        "powerPlayInfo" : {
+          "situationTimeRemaining" : 0,
+          "situationTimeElapsed" : 102,
+          "inSituation" : false
+        }
+      },
+      "venue" : {
+        "id" : 5034,
+        "name" : "PPG Paints Arena",
+        "link" : "/api/v1/venues/5034"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020442/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-17",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020466,
+      "link" : "/api/v1/game/2021020466/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-18T00:00:00Z",
+      "status" : {
+        "abstractGameState" : "Final",
+        "codedGameState" : "7",
+        "detailedState" : "Final",
+        "statusCode" : "7",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 10,
+            "losses" : 15,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 2,
+          "team" : {
+            "id" : 7,
+            "name" : "Buffalo Sabres",
+            "link" : "/api/v1/teams/7",
+            "venue" : {
+              "id" : 5039,
+              "name" : "KeyBank Center",
+              "link" : "/api/v1/venues/5039",
+              "city" : "Buffalo",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "BUF",
+            "teamName" : "Sabres",
+            "locationName" : "Buffalo",
+            "firstYearOfPlay" : "1970",
+            "division" : {
+              "id" : 17,
+              "name" : "Atlantic",
+              "nameShort" : "ATL",
+              "link" : "/api/v1/divisions/17",
+              "abbreviation" : "A"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 19,
+              "teamName" : "Sabres",
+              "link" : "/api/v1/franchises/19"
+            },
+            "shortName" : "Buffalo",
+            "officialSiteUrl" : "http://www.sabres.com/",
+            "franchiseId" : 19,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 16,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 3,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 4,
+        "currentPeriodOrdinal" : "OT",
+        "currentPeriodTimeRemaining" : "Final",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-18T00:08:57Z",
+          "endTime" : "2021-12-18T00:48:58Z",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 1,
+            "shotsOnGoal" : 21,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 5,
+            "rinkSide" : "right"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-18T01:07:47Z",
+          "endTime" : "2021-12-18T01:43:29Z",
+          "num" : 2,
+          "ordinalNum" : "2nd",
+          "home" : {
+            "goals" : 1,
+            "shotsOnGoal" : 10,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 1,
+            "shotsOnGoal" : 10,
+            "rinkSide" : "left"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-18T02:02:16Z",
+          "endTime" : "2021-12-18T02:35:45Z",
+          "num" : 3,
+          "ordinalNum" : "3rd",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 15,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 1,
+            "shotsOnGoal" : 5,
+            "rinkSide" : "right"
+          }
+        }, {
+          "periodType" : "OVERTIME",
+          "startTime" : "2021-12-18T02:38:03Z",
+          "endTime" : "2021-12-18T02:42:03Z",
+          "num" : 4,
+          "ordinalNum" : "OT",
+          "home" : {
+            "goals" : 1,
+            "shotsOnGoal" : 2,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 1,
+            "rinkSide" : "left"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 3,
+            "shotsOnGoal" : 48,
+            "goaliePulled" : false,
+            "numSkaters" : 3,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 7,
+              "name" : "Buffalo Sabres",
+              "link" : "/api/v1/teams/7"
+            },
+            "goals" : 2,
+            "shotsOnGoal" : 21,
+            "goaliePulled" : false,
+            "numSkaters" : 3,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        },
+        "powerPlayInfo" : {
+          "situationTimeRemaining" : 0,
+          "situationTimeElapsed" : 0,
+          "inSituation" : false
+        }
+      },
+      "venue" : {
+        "id" : 5034,
+        "name" : "PPG Paints Arena",
+        "link" : "/api/v1/venues/5034"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020466/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-19",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020482,
+      "link" : "/api/v1/game/2021020482/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-20T00:00:00Z",
+      "status" : {
+        "abstractGameState" : "Final",
+        "codedGameState" : "7",
+        "detailedState" : "Final",
+        "statusCode" : "7",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 17,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 3,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 10,
+            "losses" : 15,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 2,
+          "team" : {
+            "id" : 1,
+            "name" : "New Jersey Devils",
+            "link" : "/api/v1/teams/1",
+            "venue" : {
+              "name" : "Prudential Center",
+              "link" : "/api/v1/venues/null",
+              "city" : "Newark",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "NJD",
+            "teamName" : "Devils",
+            "locationName" : "New Jersey",
+            "firstYearOfPlay" : "1982",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 23,
+              "teamName" : "Devils",
+              "link" : "/api/v1/franchises/23"
+            },
+            "shortName" : "New Jersey",
+            "officialSiteUrl" : "http://www.newjerseydevils.com/",
+            "franchiseId" : 23,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 3,
+        "currentPeriodOrdinal" : "3rd",
+        "currentPeriodTimeRemaining" : "Final",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-20T00:08:09Z",
+          "endTime" : "2021-12-20T00:39:33Z",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 6,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 1,
+            "shotsOnGoal" : 4,
+            "rinkSide" : "right"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-20T00:58:18Z",
+          "endTime" : "2021-12-20T01:33:57Z",
+          "num" : 2,
+          "ordinalNum" : "2nd",
+          "home" : {
+            "goals" : 1,
+            "shotsOnGoal" : 6,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 1,
+            "shotsOnGoal" : 9,
+            "rinkSide" : "left"
+          }
+        }, {
+          "periodType" : "REGULAR",
+          "startTime" : "2021-12-20T01:52:45Z",
+          "endTime" : "2021-12-20T02:30:26Z",
+          "num" : 3,
+          "ordinalNum" : "3rd",
+          "home" : {
+            "goals" : 1,
+            "shotsOnGoal" : 7,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 1,
+            "shotsOnGoal" : 9,
+            "rinkSide" : "right"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 1,
+              "name" : "New Jersey Devils",
+              "link" : "/api/v1/teams/1"
+            },
+            "goals" : 2,
+            "shotsOnGoal" : 19,
+            "goaliePulled" : false,
+            "numSkaters" : 5,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 3,
+            "shotsOnGoal" : 22,
+            "goaliePulled" : false,
+            "numSkaters" : 5,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        },
+        "powerPlayInfo" : {
+          "situationTimeRemaining" : 0,
+          "situationTimeElapsed" : 0,
+          "inSituation" : false
+        }
+      },
+      "venue" : {
+        "name" : "Prudential Center",
+        "link" : "/api/v1/venues/null"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020482/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-21",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020497,
+      "link" : "/api/v1/game/2021020497/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-22T00:00:00Z",
+      "status" : {
+        "abstractGameState" : "Preview",
+        "codedGameState" : "9",
+        "detailedState" : "Postponed",
+        "statusCode" : "9",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 10,
+            "losses" : 15,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 1,
+            "name" : "New Jersey Devils",
+            "link" : "/api/v1/teams/1",
+            "venue" : {
+              "name" : "Prudential Center",
+              "link" : "/api/v1/venues/null",
+              "city" : "Newark",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "NJD",
+            "teamName" : "Devils",
+            "locationName" : "New Jersey",
+            "firstYearOfPlay" : "1982",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 23,
+              "teamName" : "Devils",
+              "link" : "/api/v1/franchises/23"
+            },
+            "shortName" : "New Jersey",
+            "officialSiteUrl" : "http://www.newjerseydevils.com/",
+            "franchiseId" : 23,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 17,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 1,
+        "currentPeriodOrdinal" : "1st",
+        "currentPeriodTimeRemaining" : "20:00",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "rinkSide" : "right"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "goaliePulled" : false,
+            "numSkaters" : 0,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 1,
+              "name" : "New Jersey Devils",
+              "link" : "/api/v1/teams/1"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "goaliePulled" : false,
+            "numSkaters" : 0,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        }
+      },
+      "venue" : {
+        "id" : 5034,
+        "name" : "PPG Paints Arena",
+        "link" : "/api/v1/venues/5034"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020497/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-23",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020514,
+      "link" : "/api/v1/game/2021020514/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-24T00:00:00Z",
+      "status" : {
+        "abstractGameState" : "Preview",
+        "codedGameState" : "9",
+        "detailedState" : "Postponed",
+        "statusCode" : "9",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 12,
+            "losses" : 12,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 4,
+            "name" : "Philadelphia Flyers",
+            "link" : "/api/v1/teams/4",
+            "venue" : {
+              "id" : 5096,
+              "name" : "Wells Fargo Center",
+              "link" : "/api/v1/venues/5096",
+              "city" : "Philadelphia",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PHI",
+            "teamName" : "Flyers",
+            "locationName" : "Philadelphia",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 16,
+              "teamName" : "Flyers",
+              "link" : "/api/v1/franchises/16"
+            },
+            "shortName" : "Philadelphia",
+            "officialSiteUrl" : "http://www.philadelphiaflyers.com/",
+            "franchiseId" : 16,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 17,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 1,
+        "currentPeriodOrdinal" : "1st",
+        "currentPeriodTimeRemaining" : "20:00",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "rinkSide" : "right"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "goaliePulled" : false,
+            "numSkaters" : 0,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 4,
+              "name" : "Philadelphia Flyers",
+              "link" : "/api/v1/teams/4"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "goaliePulled" : false,
+            "numSkaters" : 0,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        }
+      },
+      "venue" : {
+        "id" : 5034,
+        "name" : "PPG Paints Arena",
+        "link" : "/api/v1/venues/5034"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020514/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-27",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020523,
+      "link" : "/api/v1/game/2021020523/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-28T00:00:00Z",
+      "status" : {
+        "abstractGameState" : "Preview",
+        "codedGameState" : "9",
+        "detailedState" : "Postponed",
+        "statusCode" : "9",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 17,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 14,
+            "losses" : 10,
+            "ot" : 2,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 6,
+            "name" : "Boston Bruins",
+            "link" : "/api/v1/teams/6",
+            "venue" : {
+              "id" : 5085,
+              "name" : "TD Garden",
+              "link" : "/api/v1/venues/5085",
+              "city" : "Boston",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "BOS",
+            "teamName" : "Bruins",
+            "locationName" : "Boston",
+            "firstYearOfPlay" : "1924",
+            "division" : {
+              "id" : 17,
+              "name" : "Atlantic",
+              "nameShort" : "ATL",
+              "link" : "/api/v1/divisions/17",
+              "abbreviation" : "A"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 6,
+              "teamName" : "Bruins",
+              "link" : "/api/v1/franchises/6"
+            },
+            "shortName" : "Boston",
+            "officialSiteUrl" : "http://www.bostonbruins.com/",
+            "franchiseId" : 6,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 1,
+        "currentPeriodOrdinal" : "1st",
+        "currentPeriodTimeRemaining" : "20:00",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "rinkSide" : "right"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 6,
+              "name" : "Boston Bruins",
+              "link" : "/api/v1/teams/6"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "goaliePulled" : false,
+            "numSkaters" : 0,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "goaliePulled" : false,
+            "numSkaters" : 0,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        }
+      },
+      "venue" : {
+        "id" : 5085,
+        "name" : "TD Garden",
+        "link" : "/api/v1/venues/5085"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020523/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-29",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020542,
+      "link" : "/api/v1/game/2021020542/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-30T00:30:00Z",
+      "status" : {
+        "abstractGameState" : "Preview",
+        "codedGameState" : "9",
+        "detailedState" : "Postponed",
+        "statusCode" : "9",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 17,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 20,
+            "losses" : 8,
+            "ot" : 2,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 10,
+            "name" : "Toronto Maple Leafs",
+            "link" : "/api/v1/teams/10",
+            "venue" : {
+              "name" : "Scotiabank Arena",
+              "link" : "/api/v1/venues/null",
+              "city" : "Toronto",
+              "timeZone" : {
+                "id" : "America/Toronto",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "TOR",
+            "teamName" : "Maple Leafs",
+            "locationName" : "Toronto",
+            "firstYearOfPlay" : "1926",
+            "division" : {
+              "id" : 17,
+              "name" : "Atlantic",
+              "nameShort" : "ATL",
+              "link" : "/api/v1/divisions/17",
+              "abbreviation" : "A"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 5,
+              "teamName" : "Maple Leafs",
+              "link" : "/api/v1/franchises/5"
+            },
+            "shortName" : "Toronto",
+            "officialSiteUrl" : "http://www.mapleleafs.com/",
+            "franchiseId" : 5,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 1,
+        "currentPeriodOrdinal" : "1st",
+        "currentPeriodTimeRemaining" : "20:00",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "rinkSide" : "right"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "rinkSide" : "left"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 10,
+              "name" : "Toronto Maple Leafs",
+              "link" : "/api/v1/teams/10"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "goaliePulled" : false,
+            "numSkaters" : 0,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "goaliePulled" : false,
+            "numSkaters" : 0,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        }
+      },
+      "venue" : {
+        "name" : "Scotiabank Arena",
+        "link" : "/api/v1/venues/null"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020542/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  }, {
+    "date" : "2021-12-31",
+    "totalItems" : 1,
+    "totalEvents" : 0,
+    "totalGames" : 1,
+    "totalMatches" : 0,
+    "games" : [ {
+      "gamePk" : 2021020559,
+      "link" : "/api/v1/game/2021020559/feed/live",
+      "gameType" : "R",
+      "season" : "20212022",
+      "gameDate" : "2021-12-31T18:00:00Z",
+      "status" : {
+        "abstractGameState" : "Preview",
+        "codedGameState" : "9",
+        "detailedState" : "Postponed",
+        "statusCode" : "9",
+        "startTimeTBD" : false
+      },
+      "teams" : {
+        "away" : {
+          "leagueRecord" : {
+            "wins" : 17,
+            "losses" : 8,
+            "ot" : 5,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 5,
+            "name" : "Pittsburgh Penguins",
+            "link" : "/api/v1/teams/5",
+            "venue" : {
+              "id" : 5034,
+              "name" : "PPG Paints Arena",
+              "link" : "/api/v1/venues/5034",
+              "city" : "Pittsburgh",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "PIT",
+            "teamName" : "Penguins",
+            "locationName" : "Pittsburgh",
+            "firstYearOfPlay" : "1967",
+            "division" : {
+              "id" : 18,
+              "name" : "Metropolitan",
+              "nameShort" : "Metro",
+              "link" : "/api/v1/divisions/18",
+              "abbreviation" : "M"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 17,
+              "teamName" : "Penguins",
+              "link" : "/api/v1/franchises/17"
+            },
+            "shortName" : "Pittsburgh",
+            "officialSiteUrl" : "http://pittsburghpenguins.com/",
+            "franchiseId" : 17,
+            "active" : true
+          }
+        },
+        "home" : {
+          "leagueRecord" : {
+            "wins" : 9,
+            "losses" : 17,
+            "ot" : 2,
+            "type" : "league"
+          },
+          "score" : 0,
+          "team" : {
+            "id" : 9,
+            "name" : "Ottawa Senators",
+            "link" : "/api/v1/teams/9",
+            "venue" : {
+              "id" : 5031,
+              "name" : "Canadian Tire Centre",
+              "link" : "/api/v1/venues/5031",
+              "city" : "Ottawa",
+              "timeZone" : {
+                "id" : "America/New_York",
+                "offset" : -5,
+                "tz" : "EST"
+              }
+            },
+            "abbreviation" : "OTT",
+            "teamName" : "Senators",
+            "locationName" : "Ottawa",
+            "firstYearOfPlay" : "1992",
+            "division" : {
+              "id" : 17,
+              "name" : "Atlantic",
+              "nameShort" : "ATL",
+              "link" : "/api/v1/divisions/17",
+              "abbreviation" : "A"
+            },
+            "conference" : {
+              "id" : 6,
+              "name" : "Eastern",
+              "link" : "/api/v1/conferences/6"
+            },
+            "franchise" : {
+              "franchiseId" : 30,
+              "teamName" : "Senators",
+              "link" : "/api/v1/franchises/30"
+            },
+            "shortName" : "Ottawa",
+            "officialSiteUrl" : "http://www.ottawasenators.com/",
+            "franchiseId" : 30,
+            "active" : true
+          }
+        }
+      },
+      "linescore" : {
+        "currentPeriod" : 1,
+        "currentPeriodOrdinal" : "1st",
+        "currentPeriodTimeRemaining" : "20:00",
+        "periods" : [ {
+          "periodType" : "REGULAR",
+          "num" : 1,
+          "ordinalNum" : "1st",
+          "home" : {
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "rinkSide" : "left"
+          },
+          "away" : {
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "rinkSide" : "right"
+          }
+        } ],
+        "shootoutInfo" : {
+          "away" : {
+            "scores" : 0,
+            "attempts" : 0
+          },
+          "home" : {
+            "scores" : 0,
+            "attempts" : 0
+          }
+        },
+        "teams" : {
+          "home" : {
+            "team" : {
+              "id" : 9,
+              "name" : "Ottawa Senators",
+              "link" : "/api/v1/teams/9"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "goaliePulled" : false,
+            "numSkaters" : 0,
+            "powerPlay" : false
+          },
+          "away" : {
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            },
+            "goals" : 0,
+            "shotsOnGoal" : 0,
+            "goaliePulled" : false,
+            "numSkaters" : 0,
+            "powerPlay" : false
+          }
+        },
+        "powerPlayStrength" : "Even",
+        "hasShootout" : false,
+        "intermissionInfo" : {
+          "intermissionTimeRemaining" : 0,
+          "intermissionTimeElapsed" : 0,
+          "inIntermission" : false
+        }
+      },
+      "venue" : {
+        "id" : 5031,
+        "name" : "Canadian Tire Centre",
+        "link" : "/api/v1/venues/5031"
+      },
+      "content" : {
+        "link" : "/api/v1/game/2021020559/content"
+      },
+      "metadata" : {
+        "isManuallyScored" : false,
+        "isSplitSquad" : false
+      }
+    } ],
+    "events" : [ ],
+    "matches" : [ ]
+  } ]
+}

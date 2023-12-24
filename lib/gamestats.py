@@ -16,8 +16,10 @@ POINTS_LAST_CHANCE20 = "LChance20"
 POINTS_LAST_CHANCE5 = "LChance5"
 POINTS_LATE_WINNER = "LateWinner"
 POINTS_TIGHT_WIN = "TightWin"
-POINTS_LATE_TIGHT_WIN = "LateTightWin"
-POINTS_LATE_TIGHT_WIN20 = "LateTightWin20"
+POINTS_LATE_TIGHT_WIN1 = "LateTightWin1"
+POINTS_LATE_TIGHT_WIN1_20 = "LateTightWin1_20"
+POINTS_LATE_TIGHT_WIN2 = "LateTightWin2"
+POINTS_LATE_TIGHT_WIN2_20 = "LateTightWin2_20"
 POINTS_COME_BACK = "ComeBack"
 POINTS_EQUAL_GAME = "EqualG"
 POINTS_EQUAL_GAME3 = "EqualG3"
@@ -42,8 +44,10 @@ ALL_POINTS = {
     POINTS_LAST_CHANCE5: 8,
     POINTS_LATE_WINNER: 6,
     POINTS_TIGHT_WIN: 8,
-    POINTS_LATE_TIGHT_WIN: 4,
-    POINTS_LATE_TIGHT_WIN20: 6,
+    POINTS_LATE_TIGHT_WIN1: 3,
+    POINTS_LATE_TIGHT_WIN1_20: 5,
+    POINTS_LATE_TIGHT_WIN2: 4,
+    POINTS_LATE_TIGHT_WIN2_20: 6,
     POINTS_COME_BACK: 8,
     POINTS_EQUAL_GAME: 5,
     POINTS_EQUAL_GAME3: 8,
@@ -93,9 +97,13 @@ class GameStats:
             # Late winner, Goal on the last 15 seconds of OT
             self.find_late_OT_winner()
 
+            # Tight win, both scores 2+, games ends regular with 1 puck difference
+            # Late tight win, Tight win and the winning goal with in the last minute of 3rd
+            self.find_tight_win1()
+
             # Tight win, both scores 3+, games ends regular with 1 puck difference
             # Late tight win, Tight win and the winning goal with in the last minute of 3rd
-            self.find_tight_win()
+            self.find_tight_win2()
 
             # Come back, 3+ straight goals, up to even score or advantage
             self.find_come_back()
@@ -278,9 +286,28 @@ class GameStats:
                 last_goal_left_time < 16):
             self.add_score(POINTS_LATE_WINNER)
 
+    # Tight win, both scores 2+, games ends regular with 1 puck difference
+    # bonus for the last minute goal
+    def find_tight_win1(self):
+        goals = self.find_all_goals()
+        away_goals, home_goals = goals[-1]
+
+        if (self.game_ended_in_3rd() and
+                home_goals >= 2 and away_goals >= 2 and abs(home_goals - away_goals) == 1):
+            self.add_score(POINTS_TIGHT_WIN)
+
+            # get the last goal time left
+            last_goal_left_time = self.get_last_goal_left_time('REG')
+
+            if (goals[-2][0] == goals[-2][1] and last_goal_left_time != -1):
+                if last_goal_left_time < 21:
+                    self.add_score(POINTS_LATE_TIGHT_WIN1_20)
+                elif last_goal_left_time < 61:
+                    self.add_score(POINTS_LATE_TIGHT_WIN1)
+
     # Tight win, both scores 3+, games ends regular with 1 puck difference
     # bonus for the last minute goal
-    def find_tight_win(self):
+    def find_tight_win2(self):
         goals = self.find_all_goals()
         away_goals, home_goals = goals[-1]
 
@@ -293,57 +320,90 @@ class GameStats:
 
             if (goals[-2][0] == goals[-2][1] and last_goal_left_time != -1):
                 if last_goal_left_time < 21:
-                    self.add_score(POINTS_LATE_TIGHT_WIN20)
+                    self.add_score(POINTS_LATE_TIGHT_WIN2_20)
                 elif last_goal_left_time < 61:
-                    self.add_score(POINTS_LATE_TIGHT_WIN)
+                    self.add_score(POINTS_LATE_TIGHT_WIN2)
 
     # Come back, 3+ straight goals, up to equal score or advantage (opponent scores 3+)
     def find_come_back(self):
+        result = 0
         all_regular_goals = self.find_regular_goals()
 
-        last_home = 0
-        last_scorer = 'none'
-        last_home_seq, last_away_seq = 0, 0
+        last_home_score = 0
+        last_scoring_team = None
+        last_home_goals_cnt, last_away_goals_cnt = 0, 0
         last_score = (0, 0)
+        last_team_gained = None
+        AWAY = 0
+        HOME = 1
 
         # item = (away, home)
-        for item in all_regular_goals:
-            # print(item)
-            cur_scorer = 'none'
-            if item[1] > last_home:
-                cur_scorer = 'home'
+        for goal_event in all_regular_goals:
+            cur_scoring_team = None
+            if goal_event[HOME] > last_home_score:
+                cur_scoring_team = 'home'
             else:
-                cur_scorer = 'away'
+                cur_scoring_team = 'away'
 
-            if cur_scorer == last_scorer:
-                if cur_scorer == 'home':
-                    last_home_seq += 1
+            if cur_scoring_team == last_scoring_team and cur_scoring_team != None:
+                if cur_scoring_team == 'home':
+                    last_home_goals_cnt += 1
                 else:
-                    last_away_seq += 1
+                    last_away_goals_cnt += 1
+
+                if (last_home_goals_cnt > 2 and last_score[AWAY] >= 2 and
+                        goal_event[HOME] - goal_event[AWAY] >= 0 and
+                        last_team_gained in ['away', None]):
+                    result += 1
+                    last_team_gained = 'home'
+
+                    last_home_goals_cnt, last_away_goals_cnt = 0, 0
+                    if cur_scoring_team == 'home':
+                        last_home_goals_cnt = 1
+                    else:
+                        last_away_goals_cnt = 1
+                if (last_away_goals_cnt > 2 and last_score[HOME] >= 2 and
+                        goal_event[AWAY] - goal_event[HOME] >= 0 and
+                        last_team_gained in ['home', None]):
+                    result += 1
+                    last_team_gained = 'away'
+
+                    last_home_goals_cnt, last_away_goals_cnt = 0, 0
+                    if cur_scoring_team == 'home':
+                        last_home_goals_cnt = 1
+                    else:
+                        last_away_goals_cnt = 1
             else:
                 # check if goal has been hit
-                if (last_home_seq > 2 and last_score[0] > 2 and
-                        item[1] - item[0] >= 0):
-                    self.add_score(POINTS_COME_BACK)
-                if (last_away_seq > 2 and last_score[1] > 2 and
-                        item[0] - item[1] >= 0):
-                    self.add_score(POINTS_COME_BACK)
+                if (last_home_goals_cnt > 2 and last_score[AWAY] >= 2 and
+                        goal_event[HOME] - goal_event[AWAY] >= 0 and
+                        last_team_gained in ['away', None]):
+                    result += 1
+                    last_team_gained = 'home'
+                if (last_away_goals_cnt > 2 and last_score[HOME] >= 2 and
+                        goal_event[AWAY] - goal_event[HOME] >= 0 and
+                        last_team_gained in ['home', None]):
+                    result += 1
+                    last_team_gained = 'away'
 
-                last_home_seq, last_away_seq = 0, 0
-                if cur_scorer == 'home':
-                    last_home_seq = 1
+                last_home_goals_cnt, last_away_goals_cnt = 0, 0
+                if cur_scoring_team == 'home':
+                    last_home_goals_cnt = 1
                 else:
-                    last_away_seq = 1
+                    last_away_goals_cnt = 1
 
-            # print(curScorer, lastAwaySeq, lastHomeSeq)
+            print(cur_scoring_team, last_away_goals_cnt, last_home_goals_cnt)
 
-            last_home = item[1]
-            last_scorer = cur_scorer
-            last_score = item
+            last_home_score = goal_event[HOME]
+            last_scoring_team = cur_scoring_team
+            last_score = goal_event
 
-        if (last_home_seq > 2 and last_score[0] > 2 and last_score[1] - last_score[0] >= 0):
-            self.add_score(POINTS_COME_BACK)
-        if (last_away_seq > 2 and last_score[1] > 2 and last_score[0] - last_score[1] >= 0):
+        if (last_home_goals_cnt > 2 and last_score[AWAY] > 2 and last_score[HOME] - last_score[AWAY] >= 0):
+            result += 1
+        if (last_away_goals_cnt > 2 and last_score[HOME] > 2 and last_score[AWAY] - last_score[HOME] >= 0):
+            result += 1
+
+        for i in range(result):
             self.add_score(POINTS_COME_BACK)
 
     # Equal play up to 3:3, e.g.: 1:0, 1:1, 2:1, 2:2, 3:2, 3:3, ...

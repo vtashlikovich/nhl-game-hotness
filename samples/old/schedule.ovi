@@ -1,0 +1,13 @@
+import requests
+
+API_URL = "https://statsapi.web.nhl.com/api/v1"
+
+response = requests.get(API_URL + "/schedule?startDate=2021-12-20&endDate=2021-12-31", params={"Content-Type": "application/json"})
+data = response.json()
+
+for date in data["dates"]:
+    print("--- Date:", date["date"])
+
+    for game in date["games"]:
+        print(".", game["teams"]["away"]["team"]["name"], "﹒", game["teams"]["home"]["team"]["name"], 
+            "/", f"{game['teams']['away']['score']}:{game['teams']['home']['score']}", "/", game["status"]["detailedState"])
