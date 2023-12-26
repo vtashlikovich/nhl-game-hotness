@@ -30,6 +30,7 @@ POINTS_MAD_SCORER = "Mad"
 POINTS_STAR_POINTS = "SPoints"
 POINTS_STAR_SHINES = "SShines"
 POINTS_MASTER = "PMaster"
+POINTS_MICHIGAN = "Michigan"
 
 ALL_POINTS = {
     POINTS_OT: 6,
@@ -58,6 +59,7 @@ ALL_POINTS = {
     POINTS_STAR_POINTS: 1,
     POINTS_STAR_SHINES: 3,
     POINTS_MASTER: 1,
+    POINTS_MICHIGAN: 3,
 }
 
 PERIOD_END = 521
@@ -113,6 +115,9 @@ class GameStats:
 
             # Missed chance, in 3rd period a game no goalkeeper, opponent scores in empty net
             self.find_missed_chance()
+
+            # Michigan goal detected
+            self.find_michigan()
 
             noticable_players = self.gather_noticable_players()
 
@@ -496,6 +501,14 @@ class GameStats:
 
         if players_with_big_points > 0:
             self.add_score(POINTS_MASTER, players_with_big_points)
+
+    def find_michigan(self):
+        michigan_goals = [event for event in self.game['plays']
+                            if event['typeDescKey'] == 'goal' and
+                            event['details']['shotType'] == 'cradle']
+        goals_count = len(michigan_goals)
+        for goal in michigan_goals:
+            self.add_score(POINTS_MICHIGAN)
 
     def add_score(self, score_type: str, score_multiplicator: int = 1):
         self.points.append(
