@@ -505,6 +505,7 @@ class GameStats:
     def find_michigan(self):
         michigan_goals = [event for event in self.game['plays']
                             if event['typeDescKey'] == 'goal' and
+                            'shotType' in event['details'] and
                             event['details']['shotType'] == 'cradle']
         goals_count = len(michigan_goals)
         for goal in michigan_goals:
