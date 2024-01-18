@@ -90,12 +90,15 @@ class GameListStats:
                             if analyzer.isWow(): hottness_level = 'WOW!'
                             elif analyzer.isHot(): hottness_level = 'HOT'
 
+                            away_team_name = analyzer.game["awayTeam"]["name"]["default"]
+                            home_team_name = analyzer.game["homeTeam"]["name"]["default"]
+
                             self.results.append({
                                 "date": game_date,
                                 "id": game_id,
-                                "awayteam": away_team["name"],
+                                "awayteam": away_team_name,
                                 "awayabr": analyzer.game["awayTeam"]["abbrev"],
-                                "hometeam": home_team["name"],
+                                "hometeam": home_team_name,
                                 "homeabr": analyzer.game["homeTeam"]["abbrev"],
                                 "points": game_points,
                                 "hottness": hottness_level
@@ -105,7 +108,7 @@ class GameListStats:
                                 print(
                                     game_date + ',',
                                     str(game_id) + ',',
-                                    (away_team['name'] + ' / ' + home_team['name'] + ',').ljust(50),
+                                    (away_team_name + ' / ' + home_team_name + ',').ljust(50),
                                     str(game_points).ljust(3),
                                     hottness_level
                                 )

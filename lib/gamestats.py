@@ -397,7 +397,7 @@ class GameStats:
                 else:
                     last_away_goals_cnt = 1
 
-            print(cur_scoring_team, last_away_goals_cnt, last_home_goals_cnt)
+            # print(cur_scoring_team, last_away_goals_cnt, last_home_goals_cnt)
 
             last_home_score = goal_event[HOME]
             last_scoring_team = cur_scoring_team
