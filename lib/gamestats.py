@@ -245,12 +245,15 @@ class GameStats:
             self.add_score(POINTS_WALL)
 
     def find_high_tension(self):
-        away_regular_goals, home_regular_goals = self.find_regular_goals()[-1]
+        regular_goals = self.find_regular_goals()
 
-        if (self.game_finished() and
-                self.find_last_period_type() in ['OT', 'SO'] and
-                home_regular_goals > 3 and away_regular_goals > 3):
-            self.add_score(POINTS_HIGH_TENSION)
+        if len(regular_goals) > 1:
+            away_regular_goals, home_regular_goals = self.find_regular_goals()[-1]
+
+            if (self.game_finished() and
+                    self.find_last_period_type() in ['OT', 'SO'] and
+                    home_regular_goals > 3 and away_regular_goals > 3):
+                self.add_score(POINTS_HIGH_TENSION)
 
     # get time left of the last goal before the specified period end
     def get_last_goal_left_time(self, period_name) -> int:
