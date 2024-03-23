@@ -135,6 +135,9 @@ class GameStats:
 
             # TODO: goal while having own empty net
             # 2021020319
+            
+            # TODO: all game 1 team is lossing and it wins in the end
+            # 2023020863
 
             # TODO: too many goals - 4 points for each 5 goals by 1 team
             # TODO: too many goals - 3 points if team scored >= 7
@@ -443,14 +446,14 @@ class GameStats:
     def gather_noticable_players(self) -> list:
         if self.stats:
             away_players_forwards = [event for event in
-                                     self.stats['boxscore']['playerByGameStats']['awayTeam']['forwards']]
+                                     self.stats['playerByGameStats']['awayTeam']['forwards']]
             away_players_defense = [event for event in
-                                    self.stats['boxscore']['playerByGameStats']['awayTeam']['defense']]
+                                    self.stats['playerByGameStats']['awayTeam']['defense']]
 
             home_players_forwards = [event for event in
-                                     self.stats['boxscore']['playerByGameStats']['homeTeam']['forwards']]
+                                     self.stats['playerByGameStats']['homeTeam']['forwards']]
             home_players_defense = [event for event in
-                                    self.stats['boxscore']['playerByGameStats']['homeTeam']['defense']]
+                                    self.stats['playerByGameStats']['homeTeam']['defense']]
 
             return [
                 {
