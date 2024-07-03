@@ -62,6 +62,14 @@ __Points master__. Player (not a star) gets 3+ points per game.
 
 ## How to run
 
+How to run tests:
+
+```bash
+$ pytest tests/
+```
+
+How to run analysis:
+
 ```bash
 # get hockey games points for the last 3 days
 $ python games.py
