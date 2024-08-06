@@ -1,5 +1,5 @@
 Brotli==1.0.9
-certifi==2023.7.22
+certifi==2024.07.04
 charset-normalizer==2.0.8
 click==8.0.3
 Flask==2.2.5
