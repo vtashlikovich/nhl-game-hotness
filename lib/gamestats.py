@@ -135,7 +135,7 @@ class GameStats:
 
             # TODO: goal while having own empty net
             # 2021020319
-            
+
             # TODO: all game 1 team is lossing and it wins in the end
             # 2023020863
 
@@ -228,7 +228,9 @@ class GameStats:
     def find_tight_fight(self):
         shots = self.find_all_shots()
 
-        away_shots, home_shots = shots[-1]
+        away_shots, home_shots = 0, 0
+        if len(shots) > 0:
+            away_shots, home_shots = shots[-1]
 
         if home_shots > 27 and away_shots > 27:
             self.add_score(POINTS_TIGHT_FIGHT)
@@ -238,8 +240,13 @@ class GameStats:
         shots = self.find_all_shots()
         goals = self.find_all_goals()
 
-        away_shots, home_shots = shots[-1]
-        away_goals, home_goals = goals[-1]
+        away_shots, home_shots = 0, 0
+        away_goals, home_goals = 0, 0
+
+        if len(shots) > 0:
+            away_shots, home_shots = shots[-1]
+        if len(goals) > 0:
+            away_goals, home_goals = goals[-1]
 
         away_goalie_saves = home_shots - home_goals
         home_goalie_saves = away_shots - away_goals

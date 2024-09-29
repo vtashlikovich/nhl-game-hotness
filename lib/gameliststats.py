@@ -49,7 +49,7 @@ class GameListStats:
                         self.logger.info('date: ' + game_date)
 
                     for game_item in filter(
-                        lambda x: x['gameState'] == 'OFF',
+                        lambda x: x['gameState'] == 'FINAL',
                         date_item['games']
                     ):
                         game_id = game_item['id']
