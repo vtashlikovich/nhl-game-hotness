@@ -48,8 +48,10 @@ class GameListStats:
                     if (self.logger is not None):
                         self.logger.info('date: ' + game_date)
 
+                    ## for pre-season games value == 'FINAL'
+                    ## for regular games == 'OFF'
                     for game_item in filter(
-                        lambda x: x['gameState'] == 'FINAL',
+                        lambda x: x['gameState'] == 'OFF',
                         date_item['games']
                     ):
                         game_id = game_item['id']
