@@ -9,6 +9,8 @@ settings.json
 digital-publish/
 sweden-publish/
 server/
+game_logs/
+samples/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

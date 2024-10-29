@@ -27,13 +27,13 @@ class GameListStats:
 
     def think(self, log_live_result: bool = False):
         self.logger.info(f'{self.start_date=}, {self.end_date=}')
-        URL = NHL_API_URL + 'schedule/' + self.start_date
+        LIST_URL = NHL_API_URL + 'schedule/' + self.start_date
 
         if (self.logger is not None):
-            self.logger.info('getting list: ' + URL)
+            self.logger.info('getting list: ' + LIST_URL)
 
         try:
-            list_response = self.req.get(URL, params={'Content-Type': 'application/json'})
+            list_response = self.req.get(LIST_URL, params={'Content-Type': 'application/json'})
 
             if list_response is not None:
                 list_json = list_response.json()
