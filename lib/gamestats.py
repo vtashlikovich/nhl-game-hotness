@@ -74,7 +74,7 @@ class GameStats:
         self.points_sum = 0
 
     def think(self):
-        if 'plays' in self.game.keys():
+        if "plays" in self.game.keys():
             # OT
             self.find_OT()
 
@@ -168,7 +168,7 @@ class GameStats:
             # TODO: if few points - add points if more than 3 pucks are scored in the game
             # homeGoals, awayGoals = self.getRegularItems("goals")
 
-            self.points_sum = sum([x['points'] for x in self.getPoints()])
+            self.points_sum = sum([x["points"] for x in self.getPoints()])
 
     def getPoints(self) -> list:
         return self.points
@@ -180,49 +180,63 @@ class GameStats:
         return self.points_sum >= LEVEL_WOW
 
     def game_finished(self):
-        return self.game['plays'][-1]['typeCode'] == GAME_END
+        return self.game["plays"][-1]["typeCode"] == GAME_END
 
     def find_last_period_type(self):
-        return self.game['plays'][-1]['periodDescriptor']['periodType']
+        return self.game["plays"][-1]["periodDescriptor"]["periodType"]
 
     def game_ended_in_3rd(self):
-        event_info = self.game['plays'][-1]['periodDescriptor']
-        return event_info['periodType'] == 'REG' and event_info['number'] == 3
+        event_info = self.game["plays"][-1]["periodDescriptor"]
+        return event_info["periodType"] == "REG" and event_info["number"] == 3
 
     def find_OT(self):
-        if (self.game_finished() and
-                self.find_last_period_type() in ['OT', 'SO']):
+        if self.game_finished() and self.find_last_period_type() in ["OT", "SO"]:
             self.add_score(POINTS_OT)
 
     def find_SO(self):
-        if (self.game_finished() and
-                self.find_last_period_type() == 'SO'):
+        if self.game_finished() and self.find_last_period_type() == "SO":
             self.add_score(POINTS_SO)
 
     def find_long_SO(self):
-        shootouts_num = len([game for game in self.game['plays']
-                             if game['periodDescriptor']['periodType'] == 'SO' and
-                             not game['typeDescKey'] in ['shootout-complete', 'period-start']])
-        if (self.game_finished() and
-                self.find_last_period_type == 'SO' and
-                shootouts_num > 3):
-            if (shootouts_num > 7):
+        shootouts_num = len(
+            [
+                game
+                for game in self.game["plays"]
+                if game["periodDescriptor"]["periodType"] == "SO"
+                and not game["typeDescKey"] in ["shootout-complete", "period-start"]
+            ]
+        )
+        if (
+            self.game_finished()
+            and self.find_last_period_type == "SO"
+            and shootouts_num > 3
+        ):
+            if shootouts_num > 7:
                 self.add_score(POINTS_LONG_SO_EXTRA)
             else:
                 self.add_score(POINTS_LONG_SO)
 
     def find_all_shots(self):
-        return [(event['details']['awaySOG'], event['details']['homeSOG'])
-                for event in self.game['plays'] if event['typeDescKey'] == 'shot-on-goal']
+        return [
+            (event["details"]["awaySOG"], event["details"]["homeSOG"])
+            for event in self.game["plays"]
+            if event["typeDescKey"] == "shot-on-goal"
+        ]
 
     def find_all_goals(self):
-        return [(event['details']['awayScore'], event['details']['homeScore'])
-                for event in self.game['plays'] if event['typeDescKey'] == 'goal']
+        return [
+            (event["details"]["awayScore"], event["details"]["homeScore"])
+            for event in self.game["plays"]
+            if event["typeDescKey"] == "goal"
+        ]
 
     def find_regular_goals(self):
-        return [(event['details']['awayScore'], event['details']['homeScore'])
-                for event in self.game['plays'] if event['typeDescKey'] == 'goal' and
-                event['periodDescriptor']['periodType'] == 'REG']
+        return [
+            (event["details"]["awayScore"], event["details"]["homeScore"])
+            for event in self.game["plays"]
+            if event["typeDescKey"] == "goal"
+            and event["periodDescriptor"]["periodType"] == "REG"
+        ]
 
     # Tight fight, 28+ shots by both teams in regular
     def find_tight_fight(self):
@@ -260,9 +274,12 @@ class GameStats:
         if len(regular_goals) > 1:
             away_regular_goals, home_regular_goals = self.find_regular_goals()[-1]
 
-            if (self.game_finished() and
-                    self.find_last_period_type() in ['OT', 'SO'] and
-                    home_regular_goals > 3 and away_regular_goals > 3):
+            if (
+                self.game_finished()
+                and self.find_last_period_type() in ["OT", "SO"]
+                and home_regular_goals > 3
+                and away_regular_goals > 3
+            ):
                 self.add_score(POINTS_HIGH_TENSION)
 
     # get time left of the last goal before the specified period end
@@ -270,9 +287,12 @@ class GameStats:
         time = -1
 
         # collect list of time remaining
-        all_goal_left_times = [event['timeRemaining'] for event in self.game['plays']
-                               if event['periodDescriptor']['periodType'] == period_name and
-                               event['typeDescKey'] == 'goal']
+        all_goal_left_times = [
+            event["timeRemaining"]
+            for event in self.game["plays"]
+            if event["periodDescriptor"]["periodType"] == period_name
+            and event["typeDescKey"] == "goal"
+        ]
 
         # find tha latest goal - calc time remaining to the end of period
         if len(all_goal_left_times) > 0:
@@ -286,9 +306,11 @@ class GameStats:
     def find_last_chance(self):
         last_goal_left_time = self.get_last_goal_left_time("REG")
 
-        if (self.game_finished() and
-                self.find_last_period_type() in ['OT', 'SO'] and
-                last_goal_left_time != -1):
+        if (
+            self.game_finished()
+            and self.find_last_period_type() in ["OT", "SO"]
+            and last_goal_left_time != -1
+        ):
             if last_goal_left_time < 6:
                 self.add_score(POINTS_LAST_CHANCE5)
             elif last_goal_left_time < 21:
@@ -298,10 +320,12 @@ class GameStats:
 
     # Late winner, Goal on the last 15 seconds of OT
     def find_late_OT_winner(self):
-        last_goal_left_time = self.get_last_goal_left_time('OT')
-        if (self.find_last_period_type() == 'OT' and
-                last_goal_left_time != -1 and
-                last_goal_left_time < 16):
+        last_goal_left_time = self.get_last_goal_left_time("OT")
+        if (
+            self.find_last_period_type() == "OT"
+            and last_goal_left_time != -1
+            and last_goal_left_time < 16
+        ):
             self.add_score(POINTS_LATE_WINNER)
 
     # Tight win, both scores 2+, games ends regular with 1 puck difference
@@ -310,14 +334,18 @@ class GameStats:
         goals = self.find_all_goals()
         away_goals, home_goals = goals[-1]
 
-        if (self.game_ended_in_3rd() and
-                home_goals >= 2 and away_goals >= 2 and abs(home_goals - away_goals) == 1):
+        if (
+            self.game_ended_in_3rd()
+            and home_goals >= 2
+            and away_goals >= 2
+            and abs(home_goals - away_goals) == 1
+        ):
             self.add_score(POINTS_TIGHT_WIN)
 
             # get the last goal time left
-            last_goal_left_time = self.get_last_goal_left_time('REG')
+            last_goal_left_time = self.get_last_goal_left_time("REG")
 
-            if (goals[-2][0] == goals[-2][1] and last_goal_left_time != -1):
+            if goals[-2][0] == goals[-2][1] and last_goal_left_time != -1:
                 if last_goal_left_time < 21:
                     self.add_score(POINTS_LATE_TIGHT_WIN1_20)
                 elif last_goal_left_time < 61:
@@ -329,14 +357,18 @@ class GameStats:
         goals = self.find_all_goals()
         away_goals, home_goals = goals[-1]
 
-        if (self.game_ended_in_3rd() and
-                home_goals > 2 and away_goals > 2 and abs(home_goals - away_goals) == 1):
+        if (
+            self.game_ended_in_3rd()
+            and home_goals > 2
+            and away_goals > 2
+            and abs(home_goals - away_goals) == 1
+        ):
             self.add_score(POINTS_TIGHT_WIN)
 
             # get the last goal time left
-            last_goal_left_time = self.get_last_goal_left_time('REG')
+            last_goal_left_time = self.get_last_goal_left_time("REG")
 
-            if (goals[-2][0] == goals[-2][1] and last_goal_left_time != -1):
+            if goals[-2][0] == goals[-2][1] and last_goal_left_time != -1:
                 if last_goal_left_time < 21:
                     self.add_score(POINTS_LATE_TIGHT_WIN2_20)
                 elif last_goal_left_time < 61:
@@ -359,53 +391,65 @@ class GameStats:
         for goal_event in all_regular_goals:
             cur_scoring_team = None
             if goal_event[HOME] > last_home_score:
-                cur_scoring_team = 'home'
+                cur_scoring_team = "home"
             else:
-                cur_scoring_team = 'away'
+                cur_scoring_team = "away"
 
             if cur_scoring_team == last_scoring_team and cur_scoring_team != None:
-                if cur_scoring_team == 'home':
+                if cur_scoring_team == "home":
                     last_home_goals_cnt += 1
                 else:
                     last_away_goals_cnt += 1
 
-                if (last_home_goals_cnt > 2 and last_score[AWAY] >= 2 and
-                        goal_event[HOME] - goal_event[AWAY] >= 0 and
-                        last_team_gained in ['away', None]):
+                if (
+                    last_home_goals_cnt > 2
+                    and last_score[AWAY] >= 2
+                    and goal_event[HOME] - goal_event[AWAY] >= 0
+                    and last_team_gained in ["away", None]
+                ):
                     result += 1
-                    last_team_gained = 'home'
+                    last_team_gained = "home"
 
                     last_home_goals_cnt, last_away_goals_cnt = 0, 0
-                    if cur_scoring_team == 'home':
+                    if cur_scoring_team == "home":
                         last_home_goals_cnt = 1
                     else:
                         last_away_goals_cnt = 1
-                if (last_away_goals_cnt > 2 and last_score[HOME] >= 2 and
-                        goal_event[AWAY] - goal_event[HOME] >= 0 and
-                        last_team_gained in ['home', None]):
+                if (
+                    last_away_goals_cnt > 2
+                    and last_score[HOME] >= 2
+                    and goal_event[AWAY] - goal_event[HOME] >= 0
+                    and last_team_gained in ["home", None]
+                ):
                     result += 1
-                    last_team_gained = 'away'
+                    last_team_gained = "away"
 
                     last_home_goals_cnt, last_away_goals_cnt = 0, 0
-                    if cur_scoring_team == 'home':
+                    if cur_scoring_team == "home":
                         last_home_goals_cnt = 1
                     else:
                         last_away_goals_cnt = 1
             else:
                 # check if goal has been hit
-                if (last_home_goals_cnt > 2 and last_score[AWAY] >= 2 and
-                        goal_event[HOME] - goal_event[AWAY] >= 0 and
-                        last_team_gained in ['away', None]):
+                if (
+                    last_home_goals_cnt > 2
+                    and last_score[AWAY] >= 2
+                    and goal_event[HOME] - goal_event[AWAY] >= 0
+                    and last_team_gained in ["away", None]
+                ):
                     result += 1
-                    last_team_gained = 'home'
-                if (last_away_goals_cnt > 2 and last_score[HOME] >= 2 and
-                        goal_event[AWAY] - goal_event[HOME] >= 0 and
-                        last_team_gained in ['home', None]):
+                    last_team_gained = "home"
+                if (
+                    last_away_goals_cnt > 2
+                    and last_score[HOME] >= 2
+                    and goal_event[AWAY] - goal_event[HOME] >= 0
+                    and last_team_gained in ["home", None]
+                ):
                     result += 1
-                    last_team_gained = 'away'
+                    last_team_gained = "away"
 
                 last_home_goals_cnt, last_away_goals_cnt = 0, 0
-                if cur_scoring_team == 'home':
+                if cur_scoring_team == "home":
                     last_home_goals_cnt = 1
                 else:
                     last_away_goals_cnt = 1
@@ -416,9 +460,17 @@ class GameStats:
             last_scoring_team = cur_scoring_team
             last_score = goal_event
 
-        if (last_home_goals_cnt > 2 and last_score[AWAY] > 2 and last_score[HOME] - last_score[AWAY] >= 0):
+        if (
+            last_home_goals_cnt > 2
+            and last_score[AWAY] > 2
+            and last_score[HOME] - last_score[AWAY] >= 0
+        ):
             result += 1
-        if (last_away_goals_cnt > 2 and last_score[HOME] > 2 and last_score[AWAY] - last_score[HOME] >= 0):
+        if (
+            last_away_goals_cnt > 2
+            and last_score[HOME] > 2
+            and last_score[AWAY] - last_score[HOME] >= 0
+        ):
             result += 1
 
         for i in range(result):
@@ -441,44 +493,53 @@ class GameStats:
     # Missed chance, in 3rd period a game no goalkeeper, opponent scores in empty net
     def find_missed_chance(self):
         if self.game_ended_in_3rd():
-            all_regular_3rd_goals = [event['details'] for event in self.game['plays']
-                                     if event['typeDescKey'] == 'goal' and
-                                     event['periodDescriptor']['periodType'] == 'REG']
+            all_regular_3rd_goals = [
+                event["details"]
+                for event in self.game["plays"]
+                if event["typeDescKey"] == "goal"
+                and event["periodDescriptor"]["periodType"] == "REG"
+            ]
 
             last_goal_event = all_regular_3rd_goals[-1]
 
-            if 'goalieInNetId' not in last_goal_event:
+            if "goalieInNetId" not in last_goal_event:
                 self.add_score(POINTS_MISSED_CHANCE)
 
     def gather_noticable_players(self) -> list:
         if self.stats:
-            away_players_forwards = [event for event in
-                                     self.stats['playerByGameStats']['awayTeam']['forwards']]
-            away_players_defense = [event for event in
-                                    self.stats['playerByGameStats']['awayTeam']['defense']]
+            away_players_forwards = [
+                event
+                for event in self.stats["playerByGameStats"]["awayTeam"]["forwards"]
+            ]
+            away_players_defense = [
+                event
+                for event in self.stats["playerByGameStats"]["awayTeam"]["defense"]
+            ]
 
-            home_players_forwards = [event for event in
-                                     self.stats['playerByGameStats']['homeTeam']['forwards']]
-            home_players_defense = [event for event in
-                                    self.stats['playerByGameStats']['homeTeam']['defense']]
+            home_players_forwards = [
+                event
+                for event in self.stats["playerByGameStats"]["homeTeam"]["forwards"]
+            ]
+            home_players_defense = [
+                event
+                for event in self.stats["playerByGameStats"]["homeTeam"]["defense"]
+            ]
 
             return [
-                {
-                    'id': x['playerId'],
-                    'goals': x['goals'],
-                    'assists': x['assists']
-                }
-                for x in away_players_forwards + away_players_defense + home_players_forwards +
-                home_players_defense
+                {"id": x["playerId"], "goals": x["goals"], "assists": x["assists"]}
+                for x in away_players_forwards
+                + away_players_defense
+                + home_players_forwards
+                + home_players_defense
             ]
 
     # hat-trick, 3 goals by one player
     # poker trick, 4 goals by one player
     # 5+ goals by one player
     def find_tricks(self, noticable_players):
-        hat_tricks = len(list(filter(lambda x: x['goals'] == 3, noticable_players)))
-        poker_tricks = len(list(filter(lambda x: x['goals'] == 4, noticable_players)))
-        more_tricks = len(list(filter(lambda x: x['goals'] > 4, noticable_players)))
+        hat_tricks = len(list(filter(lambda x: x["goals"] == 3, noticable_players)))
+        poker_tricks = len(list(filter(lambda x: x["goals"] == 4, noticable_players)))
+        more_tricks = len(list(filter(lambda x: x["goals"] > 4, noticable_players)))
         if hat_tricks > 0:
             self.add_score(POINTS_HAT_TRICK, hat_tricks)
         if poker_tricks > 0:
@@ -492,10 +553,14 @@ class GameStats:
         star_has_points = 0
 
         for player in noticable_players:
-            if player['id'] in STARS:
+            if player["id"] in STARS:
                 star_has_points += 1
 
-                if (player['goals'] > 0 or player['assists'] > 1 or (player['goals'] + player['assists']) > 2):
+                if (
+                    player["goals"] > 0
+                    or player["assists"] > 1
+                    or (player["goals"] + player["assists"]) > 2
+                ):
                     star_shines_count += 1
                     star_has_points -= 1
 
@@ -509,17 +574,20 @@ class GameStats:
     def find_points_master(self, noticable_players):
         players_with_big_points = 0
         for player in noticable_players:
-            if player not in STARS and (player['goals'] + player['assists']) > 2:
+            if player not in STARS and (player["goals"] + player["assists"]) > 2:
                 players_with_big_points += 1
 
         if players_with_big_points > 0:
             self.add_score(POINTS_MASTER, players_with_big_points)
 
     def find_michigan(self):
-        michigan_goals = [event for event in self.game['plays']
-                            if event['typeDescKey'] == 'goal' and
-                            'shotType' in event['details'] and
-                            event['details']['shotType'] == 'cradle']
+        michigan_goals = [
+            event
+            for event in self.game["plays"]
+            if event["typeDescKey"] == "goal"
+            and "shotType" in event["details"]
+            and event["details"]["shotType"] == "cradle"
+        ]
         goals_count = len(michigan_goals)
         for goal in michigan_goals:
             self.add_score(POINTS_MICHIGAN)
