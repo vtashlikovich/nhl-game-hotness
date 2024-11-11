@@ -43,7 +43,7 @@ class GameListStats:
                 if self.logger is not None:
                     self.logger.info("parsing each game")
 
-                for date_item in list_json["gameWeek"]:
+                for date_item in list_json["gameWeek"] or []:
                     # game_date = date_item['date']
                     game_date = date_item["date"]
 
@@ -95,13 +95,13 @@ class GameListStats:
                             analyzer.think()
 
                             game_points = sum(
-                                [x["points"] for x in analyzer.getPoints()]
+                                [x["points"] for x in analyzer.get_points()]
                             )
 
                             hottness_level = ""
-                            if analyzer.isWow():
+                            if analyzer.is_wow():
                                 hottness_level = "WOW!"
-                            elif analyzer.isHot():
+                            elif analyzer.is_hot():
                                 hottness_level = "HOT"
 
                             away_team_name = analyzer.game["awayTeam"]["name"][

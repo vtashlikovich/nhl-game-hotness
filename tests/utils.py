@@ -1,7 +1,7 @@
 import json
 
 def get_found_point_types(game_stats):
-    return [k['code'] for k in game_stats.getPoints()]
+    return [k['code'] for k in game_stats.get_points()]
 
 def load_game(game_id, file_postfix=''):
     result = None

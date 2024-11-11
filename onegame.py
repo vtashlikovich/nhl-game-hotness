@@ -4,35 +4,40 @@ import requests
 import sys
 from lib.gamestats import GameStats
 
-JIRA_API_URL = "https://statsapi.web.nhl.com/api/v1/"
+NHL_API_URL = "https://api-web.nhle.com/v1/"
 
 if len(sys.argv) > 1:
-    gameId = sys.argv[1]
+    game_id = str(sys.argv[1])
 else:
-    print("gameId is needed")
+    print("game_id is needed")
     exit(1)
 
-print("Check game " + gameId + " hotness")
+print("Check game " + game_id + " hotness")
 
 try:
-    gameResponse = requests.get(
-        JIRA_API_URL + "game/" + str(gameId) + "/feed/live",
+    playbyplay_URL = f"{NHL_API_URL}gamecenter/{game_id}/play-by-play"
+    boxscore_URL = f"{NHL_API_URL}gamecenter/{game_id}/boxscore"
+
+    playbyplay_response = requests.get(
+        playbyplay_URL,
         params={"Content-Type": "application/json"},
     )
 
-    if gameResponse is not None:
-        analyzer = GameStats(gameResponse.json())
+    boxscore_response = requests.get(
+        boxscore_URL,
+        params={"Content-Type": "application/json"},
+    )
+
+    if playbyplay_response is not None and boxscore_response is not None:
+        analyzer = GameStats(playbyplay_response.json(), boxscore_response.json())
         analyzer.think()
 
-        gamePoints = sum([x["points"] for x in analyzer.getPoints()])
+        gamePoints = sum([x["points"] for x in analyzer.get_points()])
 
-        print(
-            gameId,
-            str(gamePoints)
-        )
+        print(game_id, str(gamePoints))
 
-        print(analyzer.getPoints())
+        print(analyzer.get_points())
 
 except Exception as exc:
     traceback = sys.exc_info()
-    print('Exception occured', type(exc).__name__, traceback)
+    print("Exception occured", type(exc).__name__, traceback)

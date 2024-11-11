@@ -27,11 +27,11 @@ try:
             analyzer = GameStats(json.loads(game_contents), json.loads(stats_contents))
             analyzer.think()
 
-            gamePoints = sum([x['points'] for x in analyzer.getPoints()])
+            gamePoints = sum([x['points'] for x in analyzer.get_points()])
 
             print(str(gamePoints))
 
-            print(analyzer.getPoints())
+            print(analyzer.get_points())
 
 except Exception as exc:
     traceback_info = sys.exc_info()
