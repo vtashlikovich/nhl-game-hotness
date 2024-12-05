@@ -104,10 +104,10 @@ class GameListStats:
                             elif analyzer.is_hot():
                                 hottness_level = "HOT"
 
-                            away_team_name = analyzer.game["awayTeam"]["name"][
+                            away_team_name = analyzer.game["awayTeam"]["commonName"][
                                 "default"
                             ]
-                            home_team_name = analyzer.game["homeTeam"]["name"][
+                            home_team_name = analyzer.game["homeTeam"]["commonName"][
                                 "default"
                             ]
 

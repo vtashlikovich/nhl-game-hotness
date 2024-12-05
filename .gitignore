@@ -11,6 +11,7 @@ sweden-publish/
 server/
 game_logs/
 samples/
+article/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
